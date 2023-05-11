@@ -1,0 +1,372 @@
+:root {
+  /* Preferences/styling */
+  --font-size-30px: 30px;
+  --font-size-50px: 50px;
+  --font-weight-700: 700;
+  --border: solid 2px var(--clr-000);
+  --border-rad: 5px;
+  --shadow: 0 5px 10px 1px;
+  --bottom-shadow: 0 5px 5px 10px;
+  /* measurments */
+  --margin: 100px;
+  --margin-center: 0 auto;
+  --margin-top: 3rem;
+  --margin-bottom: 0rem;
+  --padding: 40px;
+  /* color */
+  /*
+  Note for color global property (variable) names: Depending on what the color values/options are set too 
+  and/or are easier to remember and understand, the name will be set close to the color values.
+  */
+  /* 
+    eg. "rgb(0, 0, 0) = black", the name will be set to "--clr-000" as shown below
+    Another example depending on how many color values there are for a color, the values will be added up.
+    eg. The values in rgb for "White" are "rgb(255, 255, 255)" then these values will be added up to "765", then the name will be "--clr-765".
+  */
+  /* 
+     Min: 000
+     Max: 765
+  */
+  --clr-000: rgb(0, 0, 0);
+  --clr-122: rgb(122, 0, 0);
+  --clr-194: rgb(194, 0, 0);
+  --clr-315: rgb(105, 105, 105);
+  --clr-550: rgb(255, 149, 149);
+  --clr-690: rgb(230, 230, 230);
+  --clr-765: rgb(255, 255, 255);
+}
+
+
+
+/*  */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Line with dots */
+div.line {
+  position: relative;
+  border-top: 1px solid var(--clr-000);
+  margin: var(--margin-center);
+  width: 100%;
+}
+
+div.line:before,
+div.line:after {
+  content: "\2022";
+  position: absolute;
+  bottom: -10px;
+  color: var(--clr-000);
+}
+
+div.line:before {
+  left: -10px;
+}
+
+div.line:after {
+  right: -10px;
+}
+
+
+
+/* Phone Number */
+.info-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  /* position: absolute; */
+  border-radius: inherit;
+  /* bottom: -53px; */
+  width: inherit;
+  padding: 10px;
+  background-color: var(--clr-690);
+}
+
+.info-wrapper #phone-number {
+  font-weight: var(--font-weight-700);
+  font-size: 19px;
+  color: var(--clr-315);
+}
+
+
+
+/*  Navigation   */
+/* ============ */
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--clr-765);
+}
+
+nav .hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+nav .hamburger .patty {
+  margin: 5px;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+nav .hamburger.active .patty:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+nav .hamburger.active .patty:nth-child(2) {
+  opacity: 0;
+}
+
+nav .hamburger.active .patty:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+nav .burger-menu.active {
+  right: 0;
+}
+
+nav .burger-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 90px;
+  right: -100%;
+  height: calc(100vh - 90px);
+  width: 100%;
+  z-index: 1;
+  padding: 20px;
+  border: var(--border);
+  border-radius: var(--border-rad);
+  background-color: var(--clr-765);
+  transition: all 0.3s ease-in-out;
+}
+
+nav .burger-menu li {
+  padding: 0 1rem;
+}
+
+nav .burger-menu li,
+nav .burger-menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-30px);
+  width: 100%;
+  height: 100%;
+  color: var(--clr-194);
+}
+
+/* wide screen navbar layout */
+nav .menu {
+  display: none;
+}
+
+nav .menu a {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-700);
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--clr-194);
+}
+
+nav a:hover {
+  color: var(--clr-550);
+}
+
+nav a:focus {
+  color: var(--clr-122);
+}
+
+#address {
+  font-weight: var(--font-weight-700);
+  font-size: 15px;
+  color: var(--clr-315);
+}
+
+
+/*  Main  */
+/* ====== */
+
+main {
+  min-height: 100vh;
+}
+
+/* our Menu */
+.our-menu {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  margin: 2rem 10px;
+}
+
+.our-menu .section {
+  font-size: 20px;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.our-menu .section .img-wrapper {
+  display: flex;
+  align-items: end;
+  width: 100%;
+}
+
+.our-menu .section img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--border-rad);
+}
+
+.our-menu h2 {
+  color: var(--clr-194);
+}
+
+.our-menu ul {
+  list-style-type: none;
+}
+
+.our-menu ul li p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  border-bottom: 1px dashed black;
+}
+
+.our-menu ul li p span {
+  text-align: end;
+  margin: 0 1rem;
+}
+
+/*  Footer */
+/* ======== */
+
+footer {
+  margin: 5rem 0 0;
+  padding: 1rem 30px 0;
+  background-color: var(--clr-690);
+  box-shadow: var(--shadow);
+}
+
+footer .footer-content {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer-content div.footer-greetings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+footer .footer-content .footer-greetings h3 {
+  font-size: var(--font-size-30px);
+  color: var(--clr-194);
+}
+
+footer .footer-content .footer-greetings p {
+  font-size: var(--font-size-30px);
+  font-weight: var(--font-weight-700);
+}
+
+
+/* Links */
+
+footer .footer-content .footer-link-group .footer-links-container {
+  margin: 2rem 0;
+}
+
+footer .footer-content .footer-link-group .footer-links-container .footer-link {
+  padding: 5px 0;
+}
+
+footer .footer-content .footer-link-group .footer-links-container .footer-link a {
+  text-decoration: none;
+  font-weight: var(--font-weight-700);
+  color: var(--clr-194);
+}
+
+footer .footer-content .footer-link-group .footer-links-container .footer-link a:hover {
+  color: var(--clr-550);
+}
+
+footer .footer-content .footer-link-group .footer-links-container .footer-link a:focus {
+  color: var(--clr-122);
+}
+
+/* Webiste responsiveness */
+/* Medium */
+@media screen and (min-width: 430px) {
+
+  .intro-wrapper {
+    align-items: baseline;
+  }
+
+  .header-image {
+    width: 30%;
+    height: auto;
+  }
+
+  /* Our Menu */
+  .our-menu-boxes {
+    display: flex;
+  }
+
+  nav .burger-menu {
+    height: calc(100vh - 30%);
+    width: 60%;
+  }
+
+}
+
+/* large */
+@media screen and (min-width: 1024px) {
+
+  nav .hamburger {
+    display: none;
+  }
+
+  nav .burger-menu {
+    display: none;
+  }
+
+  nav .menu {
+    display: flex;
+  }
+
+  .header-image {
+    width: 20%;
+    height: auto;
+  }
+
+  footer .footer-content .footer-link-group {
+    display: flex;
+  }
+
+  footer .footer-content .footer-link-group .footer-links-container {
+    margin: 3em;
+  }
+
+  .our-menu .section img {
+    height: 300px;
+  }
+}

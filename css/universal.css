@@ -1,0 +1,121 @@
+:root {
+  --neon-blue: rgb(98, 148, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: rgb(30, 30, 30);
+}
+
+
+
+/*  */
+.profile-photo {
+  border: 3px solid rgb(0, 81, 255);
+  box-shadow: 0 0 13px 1px var(--neon-blue);
+  border-radius: 50%;
+}
+
+
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+header .profile-photo {
+  width: 6em;
+
+}
+
+header .profile-txt-info {
+  margin-left: 10px;
+  line-height: 2em;
+  color: white;
+}
+
+header .profile-txt-info .name {
+  font-size: 1.5em;
+}
+
+header .profile-txt-info .roll {
+  font-size: 4em;
+  margin-top: 2rem;
+}
+
+
+
+/* main */
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  min-height: 100vh;
+}
+
+.sign {
+  margin-top: 5rem;
+}
+
+.sign .inner-sign {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sign .inner-sign .profile-txt-info {
+  line-height: 2em;
+  color: white;
+}
+
+.sign .inner-sign .profile-txt-info .name {
+  font-size: 1.5em;
+}
+
+.sign .roll {
+  font-size: 3em;
+  color: white;
+}
+
+div.about-wrapper {
+  margin-top: 3rem;
+}
+
+div.about-wrapper .about h2 {
+  margin: 0 1rem 1rem;
+  text-align: start;
+}
+
+div.about-wrapper .about {
+  padding: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+
+/* Footer */
+footer {
+  padding: 5rem;
+  background-color: rgb(16, 16, 16);
+}
+
+
+/* Media */
+/* ===== */
+/* @media screen and (min-width: 430px) {
+
+} */
+
+/* @media screen and (min-width: 1024px) {
+
+} */

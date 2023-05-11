@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="css/universal.css" />
+  <link rel="stylesheet" href="/css/universal-navigation.css">
+
+  <title>Rucker's | Rucker’s</title>
+  <!--
+    Student Info:
+    Jose Luis Barcelo
+    23481611
+    703724
+    Mbarcelo85@yahoo.com
+  -->
+</head>
+
+<body>
+  <nav>
+    <div class="hamburger">
+      <div class="patty"></div>
+      <div class="patty"></div>
+      <div class="patty"></div>
+    </div>
+    <ul class="burger-menu">
+      <li><a href="#">Home</a></li>
+      <div class="line"></div>
+      <li><a href="html/orderOnline.html">Order Online</a></li>
+      <div class="line"></div>
+      <li><a href="html/giftCards.html">Gift Cards</a></li>
+      <div class="line"></div>
+      <li><a href="html/menu.html">Menu</a></li>
+      <div class="line"></div>
+      <li><a href="html/specials.html">Specials</a></li>
+      <div class="line"></div>
+      <li><a href="html/aboutUs.html">About Us</a></li>
+    </ul>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="html/orderOnline.html">Order Online</a>
+      <a href="html/giftCards.html">Gift Cards</a>
+      <a href="html/menu.html">Menu</a>
+      <a href="html/specials.html">Specials</a>
+      <a href="html/aboutUs.html">About Us</a>
+    </div>
+  </nav>
+  <div class="info-wrapper">
+    <p class="info" id="phone-number">call us at: (602) 789-5672</p>
+  </div>
+
+  <main>
+    <!-- Intro box -->
+    <div class="intro-wrapper">
+      <!-- intro content -->
+      <div class="intro-box">
+        <!-- Header -->
+        <!-- credit: https://www.cleanpng.com/png-barbecue-chef-scalable-vector-graphics-hat-vector-393227/ -->
+        <img class="header-image centered-intro-content" src="images/personal_images/barbecue-chef.png"
+          alt="Barbecue chef" />
+        <h1 class="header1">Rucker's</h1>
+        <div class="line intro-line"></div>
+
+        <!-- Statement  -->
+        <h2 class="header2 centered-intro-content">
+          The best steak in Scottsdale!
+        </h2>
+        <!-- Address -->
+        <p class="info centered-intro-content" id="address">
+          555 Mountainview Ave.
+          <br />
+          Scottsdale, AZ 85260
+        </p>
+        <!-- Greeting -->
+        <p class="info centered-intro-content" id="greetings">
+          Welcome to Rucker’s, which has been voted Best Steakhouse in
+          Scottsdale four years running! At Rucker’s you can enjoy a quality
+          steak, amazing wine, and a quiet atmosphere in a mountain-themed
+          restaurant. Rucker’s has been a tradition in Scottsdale since 1975 and
+          is an amazing place to dine.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- Form -->
+    <form name="reservation">
+      <h1>
+        Make a Reservation:
+      </h1>
+      <!-- Month -->
+      <label for="month">Month:</label>
+      <select name="month" id="month">
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+      </select>
+      <!-- Date -->
+      <label for="date">Date:</label>
+      <select name="date" id="date">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+      <!-- Time -->
+      <label for="time">Time:</label>
+      <select name="time" id="time">
+        <option value="11am" hidden>11 AM</option>
+        <option value="12pm" hidden>12 PM</option>
+        <option value="1pm" hidden>1 PM</option>
+        <option value="2pm" hidden>2 PM</option>
+        <option value="3pm" hidden>3 PM</option>
+        <option value="4pm" hidden>4 PM</option>
+        <option value="5pm" hidden>5 PM</option>
+        <option value="6pm" hidden>6 PM</option>
+        <option value="7pm" hidden>7 PM</option>
+        <option value="8pm" hidden>8 PM</option>
+        <option value="9pm" hidden>9 PM</option>
+        <option value="10pm" hidden>10 PM</option>
+      </select>
+      <!-- Year -->
+      <label for="year">Year:</label>
+      <select name="year" id="year">
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+      </select>
+      <br>
+      <!-- Submit -->
+      <input type="submit" value="Make Reservation">
+    </form>
+
+  </main>
+
+
+
+  <!-- Footer section -->
+  <!-- ============== -->
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-greetings">
+        <h3>Rucker’s</h3>
+        <p>Welcome to our Restaurant</p>
+      </div>
+      <div class="footer-link-group">
+        <div class="footer-links-container pages">
+          <h4>Pages</h4>
+          <div class="line footer-line"></div>
+          <div class="footer-link">
+            <a href="#" class="footer-links home">Home</a>
+          </div>
+          <div class="footer-link">
+            <a href="html/orderOnline.html" class="footer-links orderOnline">Order Online</a>
+          </div>
+          <div class="footer-link">
+            <a href="html/giftCards.html" class="footer-links giftCards">Gift Cards</a>
+          </div>
+          <div class="footer-link">
+            <a href="html/menu.html" class="footer-links menu">Menu</a>
+          </div>
+          <div class="footer-link">
+            <a href="html/specials.html" class="footer-links specials">Specials</a>
+          </div>
+          <div class="footer-link">
+            <a href="html/aboutUs.html" class="footer-links aboutUs">About Us</a>
+          </div>
+        </div>
+        <div class="footer-links-container socials">
+          <h4>Contact Us:</h4>
+          <div class="line footer-line"></div>
+          <div class="footer-link">
+            <a href="mailto:staff@ruckers.com">staff@ruckers.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <aside>
+    <nav id="nav">
+      <div class="nav-links">
+        <a href="/index.html">Back to Portal</a>
+      </div>
+    </nav>
+
+    <button id="nav-toggle" type="button">
+      <div class="patty-wrapper">
+        <div class="patty"></div>
+        <div class="patty"></div>
+        <div class="patty"></div>
+      </div>
+
+    </button>
+  </aside>
+
+  <script src="js/universal.js"></script>
+  <script>
+
+    const dateSelect = document.getElementById('date');
+    const timeSelect = document.getElementById('time');
+
+    // Add an event listener to the date select element
+    dateSelect.addEventListener('change', function () {
+      // Get the selected date value
+      const selectedDate = parseInt(dateSelect.value);
+
+      // Get the current date object
+      const currentDate = new Date();
+
+      // Set the current year as default year for the reservation
+      let year = currentDate.getFullYear();
+
+      // Check if the selected date is in the current year or next year
+      if (selectedDate < currentDate.getDate()) {
+        year += 1;
+      }
+
+      // Set the available time slots based on the selected date and day of week
+      let availableTimes;
+      const dayOfWeek = new Date(year, currentDate.getMonth(), selectedDate).getDay();
+      if (dayOfWeek === 0) { // Sunday
+        availableTimes = ["12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm"];
+      } else { // Monday to Saturday
+        availableTimes = ["11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm"];
+      }
+
+      // Update the time select element options
+      timeSelect.innerHTML = '';
+      availableTimes.forEach(time => {
+        const option = document.createElement('option');
+        option.value = time;
+        option.textContent = time;
+        timeSelect.appendChild(option);
+      });
+    });
+
+  </script>
+
+  <script src="/js/nav.js"></script>
+</body>
+
+</html>

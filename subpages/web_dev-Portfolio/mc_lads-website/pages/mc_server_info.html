@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" type="text/css">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Servers</title>
+  <link rel="stylesheet" href="../styles/mc_server_info.css">
+  <link rel="stylesheet" href="../styles/all.css">
+  <script src="../scripts/all.js"></script>
+
+</head>
+
+<body>
+  <!-- Start of Navigation bar -->
+  <nav>
+    <!-- Start of original nav-bar links -->
+    <a class="back" href="../index.html">&#60; Back To Homepage</a>
+    <div class="nav-center">
+      <a class="logo" href="#">MC Lads</a>
+    </div>
+
+    <!-- End of original nav-bar links -->
+  </nav>
+  <!-- End of Navigation bar -->
+  <!-- Start of drop_down and links -->
+  <div class="dropdown-div">
+    <div id="dropdown-info" class="dropdown-content">
+      <a href="../index.html"> &#60; Back To Homepage</a>
+    </div>
+  </div>
+
+  <div id="dropdown-div-btn" class="dropdown-div">
+    <button onclick="myFunction()" class="dropbtn"><img id="dropdown-png" src="../images/Drop_down.png"
+        alt="drop_down"></button>
+  </div>
+  <!-- End of drop_down and links -->
+
+  <header>
+    <!--<p class="server_hour">Server Hours; 7:30 - 11:00</p>-->
+    <!-- Start of Title -->
+    <h1>Minecraft Server</h1>
+    <!-- End of Title -->
+    <!-- Start of Bedrock Server Info -->
+    <div class="serverboxes">
+      <div class="bugrock-box-div">
+        <span style="font-weight: bold;" class="bugrock-server-boxTitle">Bedrock Server</span>
+        <hr class="txtbrk">
+        <p id="bugrocktxt">
+          Hello Lads! This is the Bedrock server. <br> To join the server, copy-paste or type down the info below.
+          <hr>
+          Server status: OFFLINE
+          <br>
+          Ip#/Name:
+          <span id="ip">
+            ***.***.*.**
+            <!-- 192.168.0.23 -->
+          </span>
+          <br>
+          Port#: 19132
+          <hr>
+        </p>
+        <br>
+        <p>Seems like both are still not working (sigh)</p>
+        <p id="bug_timer"></p>
+      </div>
+      <!-- End of Bedrock Server Info -->
+
+      <!-- Start of Java Server Info #credit given to our dear friend: Ian:D -->
+      <div class="java-box-div">
+        <span style="font-weight: bold;" class="java-server-boxTitle">Java Server</span>
+        <hr class="txtbrk">
+        <p id="javatxt">
+          Hello Lads! This is The Java server. To join the server, copy-paste or type down the info below.
+          <hr>
+          Server Status: <span id="status"> OFFLINE </span><br>Ip#/Name: ***.***.*.** <br>
+          <hr>
+        </p>
+
+        <div id="menuinfo">
+          This is a modded server so you will need certain Requirments, Click the Requirments button below to see what
+          software you will need to install.
+          <details class="requirments_drpdwn">
+            <summary role="button">
+              <a class="button">Requirments</a>
+            </summary>
+            <ul>
+              <hr>
+              <li> <a href="https://files.minecraftforge.net/net/minecraftforge/forge/" target="_blank">Forge</a>
+              </li>
+              <hr>
+              <li><a href="https://optifine.net/adloadx?f=OptiFine_1.19.2_HD_U_H9.jar" target="_blank">Optifine</a></li>
+              <hr>
+              <li><a href="https://modrepo.de/minecraft/voicechat" target="_blank"> Simple voice chat</a></li>
+              <hr>
+              <li><a href="https://www.curseforge.com/minecraft/mc-mods/falling-tree/download/3968312"
+                  target="_blank">falling
+                  tree</a></li>
+              <hr>
+              <li><a href="https://www.curseforge.com/minecraft/mc-mods/ydms-weapon-master/download/3919439"
+                  target="_blank">Weapon
+                  Master</a></li>
+            </ul>
+          </details>
+        </div>
+        <br>
+        <p>Time since server opened:</p>
+        <p id="java_timer"></p>
+      </div>
+    </div>
+    <!-- End of Java Server Info -->
+
+  </header>
+
+  <!-- Quick Preveiw of whats going to be on this page and what you are going to
+      see: Minecraft server info, and amazing Photos on what you guys make. Also
+      things that we made in other worlds with amazing memories. -->
+  <!-- Start of footer -->
+  <div class="footer-container">
+    <!-- Start of footer nav links -->
+    <div class="footer">
+      <div class="footer-heading footer1">
+        <h2>Pages</h2>
+        <a href="../index.html">MC Lads Homepage</a>
+        <a href="../pages/mc_server_info.html">Minecraft Servers</a>
+        <a href="../pages/change_log.html">Change Log</a>
+        <a href="../pages/about_the_dev.html">About the Developer</a>
+        <a href="../pages/credits.html">Credits</a>
+      </div>
+      <!-- Start of footer contact -->
+      <div class="footer-heading footer2">
+        <!--  -->
+        <h2>Social Media/Contacts</h2>
+        Discord:
+        El_Cubano#8182
+        <div>Email:
+          <a class="footer-email" href="mailto:baruserojoshi@gmail.com">baruserojoshi@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Nov 21, 2022 6:30:00 am").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "Open";
+        document.getElementById("status").innerHTML = "ONLINE";
+      }
+    }, 1000);
+  </script> -->
+
+  <script>
+    // the date to count from
+    const startFrom = new Date('Nov 20, 2022 8:30:00 pm');
+    // the html element to display the result in
+    const element = document.getElementById('java_timer');
+    // repeat every second:
+    setInterval(displayDifference, 1000)
+
+    function displayDifference() {
+      // find difference between dates, expressed in milliseconds
+      const difference = Date.now() - startFrom;
+      // calculate the time units
+      const { months, days, hours, minutes, seconds } = formatMilliseconds(difference);
+      // show the formatted time units on the page
+      element.innerText = `${months}mo ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    function formatMilliseconds(duration) {
+      // How many full months fit into the difference
+      const months = Math.floor(duration / 30 / 24 / 60 / 60 / 1000);
+      // remove the full months from the difference
+      duration -= months * 30 * 24 * 60 * 60 * 1000;
+      // how many full days fit into the remaining difference
+      const days = Math.floor(duration / 24 / 60 / 60 / 1000);
+      // remove days from remaining difference
+      duration -= days * 24 * 60 * 60 * 1000;
+      // and so on...
+      const hours = Math.floor(duration / 60 / 60 / 1000);
+      duration -= hours * 60 * 60 * 1000;
+      const minutes = Math.floor(duration / 60 / 1000);
+      duration -= minutes * 60 * 1000;
+      const seconds = Math.floor(duration / 1000);
+      duration -= seconds * 1000;
+      return {
+        months, days, hours, minutes, seconds,
+        milliseconds: duration
+      };
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+/* Note: Specific ordering for properties and rulesets*/
+/* 
+  ordering of the ruleset properties:
+
+  ... {
+  .Preferences (e.g. Display, borders, Fonts etc.)
+  .measurments (e.g. Margins, padding etc.)
+  .color
+  }
+*/
+/* 
+  I also order the CSS ruleset according to the order of the directed html file.
+*/
+
+
+
+/* The homepage intro */
+
+.intro-wrapper .intro-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 0 20px;
+}
+
+/* All the content inside the box */
+.intro-wrapper .intro-box .centered-intro-content {
+  color: var(--clr-000);
+}
+
+/* The Barbecue image below the statement */
+.header-image {
+  width: 60%;
+  height: auto;
+}
+
+/* The Name 'Rucker's' */
+.intro-wrapper .intro-box .header1 {
+  font-size: 300%;
+  margin: 3rem 0 0;
+  color: var(--clr-194);
+}
+
+.intro-wrapper .intro-box .intro-line {
+  width: 10em;
+}
+
+/* The statement 'The best steak in Scottsdale!' */
+h2 {
+  font-size: 150%;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+/* Address */
+.intro-wrapper #address {
+  margin: 0 0 1rem;
+  color: var(--clr-000);
+}
+
+#greetings {
+  font-weight: var(--font-weight-700);
+  font-size: 120%;
+  margin: 3rem 0;
+}
+
+
+/* form */
+h1 {
+  margin: 1rem 0 0 1rem;
+  color: var(--clr-194);
+
+}
+
+form {
+  padding: 10px;
+}
+
+select {
+  width: 30vw;
+  height: 40px;
+  font-size: 18px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid;
+  /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); */
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid var(--clr-194);
+  /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); */
+}
+
+input[type="submit"] {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  background-color: var(--clr-194);
+  color: var(--clr-765);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--clr-550);
+}
+
+label {
+  display: block;
+  margin: 0 10px 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--clr-194);
+}
+
+/* large */
+@media screen and (min-width: 1024px) {
+  #greetings {
+    width: 50%;
+  }
+}

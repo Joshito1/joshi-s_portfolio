@@ -1,0 +1,279 @@
+/* Start of navigation bar */
+nav {
+  position: relative;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+nav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0px 30px 0px 30px;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.logo {
+  font-size: 500%;
+  padding: 0;
+}
+
+.nav-right {
+  float: right;
+}
+
+.nav-left,
+.nav-right {
+  display: none;
+}
+
+/* End of navigation bar */
+
+/* Drop down Start */
+
+#dropdown-png {
+  width: 120%;
+  height: auto;
+}
+
+.dropdown-div {
+  display: inline-block;
+}
+
+#dropdown-div-btn {
+  float: right;
+  margin: 5px 30px 0px 0px;
+}
+
+.dropbtn {
+  background-color: #00000000;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content {
+  margin-top: 5em;
+  background-color: #303030;
+  width: 100%;
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 40px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.show {
+  display: block;
+}
+/* Drop down End */
+
+.box {
+  margin: 5em 0 10em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-self: center;
+}
+
+.box .info {
+  position: relative;
+  padding: 50px;
+  width: 65%;
+  text-align: center;
+  font-size: 160%;
+  background-color: #6b9275;
+  line-height: 25px;
+}
+
+h1 {
+  line-height: 50px;
+}
+
+.box h2 {
+  padding-top: 3em;
+  padding-bottom: 1em;
+}
+
+.cur_ver_txt {
+  font-weight: bold;
+}
+
+.top_version_number {
+  font-size: larger;
+  font-weight: 1000;
+}
+
+.txtlogbrk {
+  width: auto;
+  padding: 15px;
+  margin: auto;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 2px dotted #0000001c;
+}
+
+.random-link {
+  color: rgb(174, 174, 174);
+}
+
+/* Tutorial Start */
+#tutorial {
+  display: none;
+}
+
+.tutorial_button {
+  cursor: pointer;
+}
+
+#tutorial_png {
+  width: 8%;
+  height: auto;
+}
+
+.tutorial_txt {
+  padding-bottom: 1em;
+}
+
+[id*="box_"] {
+  position: absolute;
+  z-index: 1;
+  width: 15%;
+  height: auto;
+  color: #f2f2f2;
+  background: #000000be;
+  border: ridge 4px #7a7a7a;
+  box-shadow: 0 0 0 10px #c6c6c6;
+  outline: solid 2px #000000;
+  outline-offset: 0.5em;
+  font: bold 1rem;
+  padding: 1rem;
+}
+
+#box_1 {
+  bottom: 21em;
+  left: 1em;
+}
+
+#box_2 {
+  top: 7em;
+  left: 83em;
+}
+
+#box_3 {
+  top: 7em;
+  left: 95em;
+}
+
+#tutorial_boxes .back,
+.cancel,
+.next,
+.finish {
+  font-family: "VT323";
+  color: #565656;
+  background-color: #c7c7c7;
+  padding: 5px 10px 5px 10px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#tutorial_boxes .back:active,
+.cancel:active,
+.next:active,
+.finish:active {
+  color: #000000;
+  background-color: #767676;
+}
+
+[class*="pointer_"] {
+  border-top-color: transparent !important;
+  border-bottom-color: #c6c6c6;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  top: -40px;
+}
+
+.pointer_1 {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border: inset 14px #c6c6c6;
+}
+
+/* Tutorial End */
+
+#info {
+  float: left;
+  margin: 1em 0 0 5px;
+}
+
+.bottomInfo {
+  font-size: 160%;
+  color: #608b6b;
+}
+
+@media screen and (min-width: 1370px) {
+  .dropdown-div {
+    display: none;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: inline;
+  }
+
+  nav {
+    padding: 50px 0px 50px 0px;
+    display: block;
+    position: relative;
+  }
+
+  .nav-center {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
+
+  .back {
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 250%;
+  }
+
+  .box .info {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  #tutorial {
+    display: block;
+  }
+
+  #tutorial_png {
+    width: 10%;
+    height: auto;
+  }
+}

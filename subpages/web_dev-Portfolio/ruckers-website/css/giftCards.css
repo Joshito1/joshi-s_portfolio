@@ -1,0 +1,78 @@
+h1 {
+    margin: 1rem 0 0 1rem;
+    color: var(--clr-194);
+}
+
+img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+main p {
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: var(--font-weight-700);
+    border: 2px solid var(--clr-194);
+    border-radius: 5px;
+    margin: 2rem 5px;
+    padding: 1rem;
+}
+
+
+
+/* form */
+form {
+    padding: 10px;
+}
+
+select {
+    width: 30vw;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid;
+    /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); */
+}
+
+select:focus {
+    outline: none;
+    border: 1px solid var(--clr-194);
+    /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); */
+}
+
+input[type="submit"] {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: var(--clr-194);
+    color: var(--clr-765);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--clr-550);
+}
+
+label {
+    display: block;
+    margin: 0 10px 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--clr-194);
+}
+
+/* large */
+@media screen and (min-width: 1024px) {
+
+    img,
+    main p {
+        width: 50%;
+    }
+
+}

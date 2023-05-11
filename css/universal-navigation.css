@@ -1,0 +1,208 @@
+/* Portal nav */
+/* aside {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto auto;
+} */
+
+aside nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0%;
+    right: -100%;
+    height: calc(100vh - 0%);
+    width: 100%;
+    z-index: 1;
+    padding: 20px;
+    border: 2px solid rgb(134, 130, 238);
+    border-radius: 5px;
+    background-color: rgba(71, 71, 71, 0.976);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+aside nav.active {
+    right: 0%;
+}
+
+
+
+/* nav button */
+aside #nav-toggle {
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    bottom: 1rem;
+    z-index: 3;
+    width: 4rem;
+    height: 4rem;
+    margin: 20px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 4rem rgba(0 0 0 / 35%);
+    outline: none;
+    background-color: lightslategrey;
+
+    -webkit-transition-timing-function: ease;
+    -webkit-transition-duration: 5ms;
+    transition-timing-function: ease;
+    transition-duration: 5ms;
+
+}
+
+aside #nav-toggle .patty {
+    margin: 5px auto;
+    width: 25px;
+    height: 3px;
+    opacity: 1;
+    background-color: #333;
+
+
+    -webkit-transition-timing-function: ease;
+    -webkit-transition-duration: 400ms;
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+}
+
+aside #nav-toggle:active {
+    -webkit-transform: scale(0.80);
+    transform: scale(0.80);
+}
+
+aside #nav-toggle.active .patty-wrapper .patty:nth-child(1) {
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+aside #nav-toggle.active .patty-wrapper .patty:nth-child(2) {
+    opacity: 0;
+}
+
+aside #nav-toggle.active .patty-wrapper .patty:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* aside #nav-toggle:hover .patty-wrapper .patty {
+    opacity: 1;
+  }
+  
+  aside[data="true"] #nav-toggle .patty-wrapper .patty {
+    opacity: 1;
+  } */
+
+
+
+/* nav links */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: transparent;
+}
+
+
+.nav-links a {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 1rem;
+    background: linear-gradient(to right, rgb(4, 0, 128), rgb(134, 130, 238), rgb(197, 192, 255), rgb(4, 0, 128));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+
+    animation: background-pan 3s linear infinite;
+}
+
+.nav-links a:hover {
+    background: linear-gradient(to right, purple, violet, pink, purple);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+
+    animation: background-pan 3s linear infinite;
+}
+
+.nav-links a::before,
+.nav-links a::after {
+    position: relative;
+    display: inline-block;
+    color: rgb(197, 192, 255);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+.nav-links a::before {
+    right: 0rem;
+    content: "-\003E";
+    animation: link .5s linear infinite alternate;
+}
+
+.nav-links a::after {
+    left: 0.4rem;
+    content: "\003C-";
+    animation: link2 .5s linear infinite alternate;
+}
+
+@keyframes link {
+    0% {
+        transform: translate(0px);
+    }
+
+    100% {
+        transform: translate(-5px);
+    }
+}
+
+@keyframes link2 {
+    0% {
+        transform: translate(-5px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+    color: violet;
+}
+
+
+
+/* Keyframe */
+/* ======== */
+
+/* magical text */
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+
+
+/* Media */
+@media screen and (min-width: 430px) {
+    aside nav {
+        width: 25rem;
+    }
+}

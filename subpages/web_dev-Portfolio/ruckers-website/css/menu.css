@@ -1,0 +1,67 @@
+/* The "Our Menu" title */
+#menu-title-wrapper {
+  text-align: center;
+  margin: 4rem 0;
+  padding: 30px;
+}
+
+#our-menu-title {
+  text-decoration: none;
+  font-size: var(--font-size-50px);
+  font-weight: var(--font-weight-700);
+  color: var(--clr-194);
+}
+
+/*  */
+.our-menu-boxes {
+  margin: 1rem 0 2rem;
+  width: 100%;
+}
+
+.our-menu-boxes a,
+#main .menu-boxes {
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  font-size: 2em;
+  border-radius: var(--border-rad);
+  margin: 0 1rem 1rem;
+  width: 90%;
+}
+
+.our-menu-boxes a .menu-boxes,
+#main .menu-boxes {
+  padding: 15rem 0 0;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-box1 {
+  background-image: url("../images/menu.jpg");
+  width: auto !important;
+}
+
+.menu-box2 {
+  background-image: url("../images/wine-with-steak-dinners.jpg");
+}
+
+.menu-box3 {
+  background-image: url("../images/caramel-mousse-cake.jpg");
+}
+
+.menu-boxes-heading {
+  font-weight: var(--font-weight-700);
+  padding: 1em;
+  background: linear-gradient(hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / .2) 10%,
+      hsl(0 0% 0% / 1));
+  color: white;
+}
+
+.menu-boxes .menu-boxes-heading span,
+.our-menu-boxes a,
+#main {
+  text-decoration: none;
+  color: var(--clr-194);
+}

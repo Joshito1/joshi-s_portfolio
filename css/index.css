@@ -1,0 +1,74 @@
+.profile-photo {
+    margin-bottom: 1rem;
+    width: 10rem;
+}
+
+.portal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.portal .nav-links {
+    flex-direction: column;
+    margin-top: 2em;
+    width: inherit;
+}
+
+.portal .nav-links a {
+    font-size: 1.1rem !important;
+}
+
+.nav-links .img {
+    width: inherit;
+    height: 200px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-links .img-1 {
+    background-image: url("/source/images/paint-palate-612x612.jpg");
+}
+
+.nav-links .img-2 {
+    background-image: url("/source/images/code.jpg");
+}
+
+
+
+/* .portal .links a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 1rem 0;
+    background: linear-gradient(to right, purple, violet, pink, purple);
+    background: linear-gradient(to right, rgb(4, 0, 128), rgb(134, 130, 237), rgb(197, 192, 255), rgb(4, 0, 128));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: background-pan 3s linear infinite;
+} */
+
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .profile-photo {
+        width: 20em;
+    }
+}

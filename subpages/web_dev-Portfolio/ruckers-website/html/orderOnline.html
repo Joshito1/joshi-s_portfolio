@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/orderOnline.css">
+    <link rel="stylesheet" href="../css/universal.css">
+    <title>OnlineOrder | Rucker’s</title>
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="patty"></div>
+            <div class="patty"></div>
+            <div class="patty"></div>
+        </div>
+        <ul class="burger-menu">
+            <li><a href="../index.html">Home</a></li>
+            <div class="line"></div>
+            <li><a href="#">Order Online</a></li>
+            <div class="line"></div>
+            <li><a href="./giftCards.html">Gift Cards</a></li>
+            <div class="line"></div>
+            <li><a href="./menu.html">Menu</a></li>
+            <div class="line"></div>
+            <li><a href="./specials.html">Specials</a></li>
+            <div class="line"></div>
+            <li><a href="./aboutUs.html">About Us</a></li>
+        </ul>
+        <div class="menu">
+            <a href="../index.html">Home</a>
+            <a href="#">Order Online</a>
+            <a href="./giftCards.html">Gift Cards</a>
+            <a href="./menu.html">Menu</a>
+            <a href="./specials.html">Specials</a>
+            <a href="./aboutUs.html">About Us</a>
+        </div>
+    </nav>
+    <div class="info-wrapper">
+        <p class="info" id="phone-number">call us at: (602) 789-5672</p>
+    </div>
+
+
+    <main>
+        <h1>Order Online</h1>
+        <form action="submit_order.php" method="POST">
+            <div class="primary-info">
+                <!-- name -->
+                <div class="name">
+                    <label for="first_name last_name">Name</label>
+                    <!-- First name -->
+                    <input type="text" id="first_name" name="first_name" placeholder="First name" required><br><br>
+                    <!-- Last name -->
+                    <input type="text" id="last_name" name="last_name" placeholder="Last_name" required><br><br>
+                </div>
+                <!-- Phone number -->
+                <label for="phone_number">Phone number:</label>
+                <input type="tel" id="phone_number" name="phone_number" placeholder="123-456-7890" required><br><br>
+                <!-- Email -->
+                <label for="email_address">Email address:</label>
+                <input type="email" id="email_address" name="email_address" placeholder="Example@directory.com"
+                    required><br><br>
+            </div>
+
+
+
+            <!-- Credit card -->
+            <div class="secondary-info">
+                <h2>Credit card information</h2>
+                <!-- Credit card number -->
+                <label for="card_number">Credit card number:</label>
+                <input type="text" id="card_number" name="card_number" placeholder="1234 5678 9012 3456"
+                    required><br><br>
+                <!--  -->
+                <label for="expiration_month">Expiration date:</label>
+                <select id="expiration_month" name="expiration_month" required>
+                    <option value="">--Month--</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <!--  -->
+                <select id="expiration_year" name="expiration_year" required>
+                    <option value="">--Year--</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                </select><br><br>
+                <!-- CSV number -->
+                <label for="csv_number">CSV number:</label>
+                <input type="text" id="csv_number" name="csv_number" placeholder="0123" required><br><br>
+            </div>
+
+
+
+            <!-- Pickup Time -->
+            <h2>Pickup information</h2>
+            <label for="pickup_time">Desired pickup time:</label>
+            <select id="pickup_time" name="pickup_time" required>
+                <option value="">--Select a time--</option>
+                <option value="9:00AM">9:00AM</option>
+                <option value="9:30AM">9:30AM</option>
+                <option value="10:00AM">10:00AM</option>
+                <option value="10:30AM">10:30AM</option>
+                <option value="11:00AM">11:00AM</option>
+                <option value="11:30AM">11:30AM</option>
+                <option value="12:00PM">12:00PM</option>
+                <option value="12:30PM">12:30PM</option>
+                <option value="1:00PM">1:00PM</option>
+                <option value="1:30PM">1:30PM</option>
+                <option value="2:00PM">2:00PM</option>
+                <option value="2:30PM">2:30PM</option>
+                <option value="3:00PM">3:00PM</option>
+                <option value="3:30PM">3:30PM</option>
+                <option value="4:00PM">4:00PM</option>
+                <option value="4:30PM">4:30PM</option>
+                <option value="5:00PM">5:00PM</option>
+                <option value="5:30PM">5:30PM</option>
+                <option value="6:00PM">6:00PM</option>
+                <option value="6:30PM">6:30PM</option>
+                <option value="7:00PM">7:00PM</option>
+                <option value="7:30PM">7:30PM</option>
+                <option value="8:00PM">8:00PM</option>
+                <option value="8:30PM">8:30PM</option>
+            </select><br><br>
+
+            <!-- Submit -->
+            <input type="submit" value="Submit Order">
+        </form>
+
+    </main>
+
+
+    <!-- Footer section -->
+    <!-- ============== -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-greetings">
+                <h3>Rucker’s</h3>
+                <p>Welcome to our Restaurant</p>
+            </div>
+            <div class="footer-link-group">
+                <div class="footer-links-container pages">
+                    <h4>Pages</h4>
+                    <div class="line footer-line"></div>
+                    <div class="footer-link">
+                        <a href="../index.html" class="footer-links home">Home</a>
+                    </div>
+                    <div class="footer-link">
+                        <a href="#" class="footer-links orderOnline">Order Online</a>
+                    </div>
+                    <div class="footer-link">
+                        <a href="./giftCards.html" class="footer-links giftCards">Gift Cards</a>
+                    </div>
+                    <div class="footer-link">
+                        <a href="./menu.html" class="footer-links menu">Menu</a>
+                    </div>
+                    <div class="footer-link">
+                        <a href="./specials.html" class="footer-links specials">Specials</a>
+                    </div>
+                    <div class="footer-link">
+                        <a href="./aboutUs.html" class="footer-links aboutUs">About Us</a>
+                    </div>
+                </div>
+                <div class="footer-links-container socials">
+                    <h4>Contact Us:</h4>
+                    <div class="line footer-line"></div>
+                    <div class="footer-link">
+                        <a href="mailto:staff@ruckers.com">staff@ruckers.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/universal.js"></script>
+</body>
+
+</html>

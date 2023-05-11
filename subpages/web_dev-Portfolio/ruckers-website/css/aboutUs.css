@@ -1,0 +1,23 @@
+.about-wrapper {
+    margin: 3rem 0 0;
+}
+
+.about-wrapper h1 {
+    font-size: var(--font-size-50px);
+    padding: 5px 1rem;
+    color: var(--clr-194);
+}
+
+.about-wrapper p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: var(--font-weight-700);
+    padding: 10rem 1rem;
+    color: var(--clr-765);
+    opacity: 90%;
+    background-image: url(../images/restaurant-interior.jpg);
+    background-attachment: fixed;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

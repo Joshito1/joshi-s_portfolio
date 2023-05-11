@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" type="text/css">
+  <title>MC Lads Website</title>
+  <link rel="stylesheet" href="styles/all.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/css/universal-navigation.css">
+</head>
+
+<body>
+  <!-- Start of Navigation bar -->
+  <nav>
+    <!-- Start of original nav-bar links -->
+    <a class="nav-left" href="pages/mc_server_info.html">Minecraft Servers</a>
+    <div class="nav-right">
+      <a class="change-log" href="pages/change_log.html">Change Log</a>
+    </div>
+    <!-- End of original nav-bar links -->
+    <div class="nav-center">
+      <a class="logo" href="#">MC Lads</a>
+    </div>
+  </nav>
+  <!-- End of Navigation bar -->
+  <!-- Start of drop_down and links -->
+  <div class="dropdown-div">
+    <div id="dropdown-info" class="dropdown-content">
+      <a href="pages/mc_server_info.html">Minecraft Servers</a>
+      <hr class="ddbrk">
+      <a href="pages/change_log.html">Change Log</a>
+    </div>
+  </div>
+
+  <div id="dropdown-div-btn" class="dropdown-div">
+    <button onclick="myFunction()" class="dropbtn">
+      <img id="dropdown-png" src="images/Drop_down.png" alt="drop_down">
+    </button>
+  </div>
+  <!-- End of drop_down and links -->
+
+
+  <!-- Start of notification bell -->
+  <div class="notification-bell-btn-div">
+    <a class="notification-bell-btn" href="pages/notifications.html">
+      <div class="notification-bell-png-div"><img src="images/notification_bell.png" alt="Notifications"
+          class="notification-bell-png"></div>
+      <!-- <div class="notification-bell-banner">0</div> -->
+    </a>
+  </div>
+  <!-- end of notification bell -->
+
+  <!-- Start of Text -->
+  <header>
+    <!-- Start of Yellow splash text -->
+    <div class="tilt">
+      <div id="status" class="pop"></div>
+    </div>
+    <!-- End of Yellow splash text -->
+
+    <div class="text">
+      Hello there lads, I Welcome you To.. The MC Lads Website! <br>
+      In here I will be putting the information to the MC Dedicated Server. If you have any ideas on improving the
+      website Please let me know. So I hope you
+      enjoy this website and hope you enjoy the rest of your day :D
+    </div>
+  </header>
+  <!-- End of Text -->
+
+  <!-- Start of tutorial -->
+  <div id="tutorial">
+    <!-- Start of tutorial boxes -->
+    <div id="tutorial_boxes">
+      <!--  -->
+      <div id="box_1" style="display: none;">
+        <div class="tutorial_txt">
+          <p>Would you like to start a quick tutorial to learn about the website?</p>
+        </div>
+        <button class="cancel" type="button" onclick="cancel_tutorial()">Not now</button>
+        <button class="next" type="button" onclick="next_box2(); hide_current1()">Sure</button>
+        <div class="tutorial_counter">
+        </div>
+      </div>
+      <!--  -->
+      <div id="box_2" style="display: none;">
+        <div class="pointer_1"></div>
+        <div class="tutorial_txt">
+          <p>How the name suggests, this is where you'll get the MC servers information and how to enter it. Click
+            "Minecraft Servers" to
+            see
+            the server information. Else, click the Next button.</p>
+        </div>
+        <button class="back" type="button" onclick="previous_tutorial_1(); hide_current2()">previous</button>
+        <button class="next" type="button" onclick="next_box3(); hide_current2()">Next</button>
+        <div class="tutorial_counter">
+          <p>1 of 3</p>
+        </div>
+      </div>
+      <!--  -->
+      <div id="box_3" style="display: none;">
+        <div class="pointer_2"></div>
+        <div class="tutorial_txt">
+          <p>In this page you will find the changes that have been made, and will come overtime. You will also Find
+            "About the Developer" and "Credit" pages. Click "Change log" to see more, and then again to continue the
+            tutorial,
+            click
+            the questoin mark inside the Change Log
+            page. Else, Click Next.</p>
+        </div>
+        <button class="back" type="button" onclick="previous_tutorial_2(); hide_current3()">previous</button>
+        <button class="next" type="button" onclick="next_box4();hide_current3()">Next</button>
+        <div class="tutorial_counter">
+          <p>2 of 3</p>
+        </div>
+      </div>
+      <!--  -->
+      <div id="box_4" style="display: none;">
+        <div class="pointer_3"></div>
+        <div class="tutorial_txt">
+          <p>Last but not least, the Notification page/Bell. In here you will get notifications of the website pages and
+            more. Click it to see what has been posted. Else, Click Finish.</p>
+        </div>
+        <button class="back" type="button" onclick="previous_tutorial_3(); hide_current4()">previous</button>
+        <button class="finish" type="button" onclick="hide_current4()">Finish</button>
+        <div class="tutorial_counter">
+          <p>3 of 3</p>
+        </div>
+      </div>
+    </div>
+    <!-- End of tutorial boxes -->
+  </div>
+  <!-- End of tutorial -->
+
+
+
+  <!-- Start of Cookie banner -->
+  <!-- <div class="cookie-banner">
+    <div class="cookie-banner-div">
+      <p class="cookie-banner-txt">
+        The Website uses cookies for the best possible experience. It will not sell users Information.
+      </p>
+      <div class="cookie-buttons">
+        <button class="ok-btn">Ok</button>
+        <button onclick="location.href='cookie_info.html'" type="button" class="cookie-info">Learn more</button>
+      </div>
+    </div>
+  </div> -->
+  <!-- End of Cookie banner -->
+  <!-- Start of footer -->
+  <div class="footer-container">
+    <!-- Start of footer nav links -->
+    <div class="footer">
+      <div class="footer-heading footer1">
+        <h2>Pages</h2>
+        <a href="index.html">MC Lads Homepage</a>
+        <a href="pages/mc_server_info.html">Minecraft Servers</a>
+        <a href="pages/change_log.html">Change Log</a>
+        <a href="pages/about_the_dev.html">About the Developer</a>
+        <a href="pages/credits.html">Credits</a>
+      </div>
+      <!-- Start of footer contact -->
+      <div class="footer-heading footer2">
+        <!--  -->
+        <h2>Social Media/Contacts</h2>
+        <div>Discord: El_Cubano#8182</div>
+        <div>Email:
+          <a class="footer-email" href="mailto:baruserojoshi@gmail.com">baruserojoshi@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <!-- Start of info -->
+    <div id="info">
+      <a class="tutorial_button" id="tutorial">
+        <img onclick="tutorial_box_appear()" id="tutorial_png" src="images/Tutorial.png" alt="Tutorial">
+      </a>
+      <!-- Start of Version Text -->
+      <div class="version_div">
+        <p class="version">Version: 2.1</p>
+      </div>
+      <!-- End of Version Text -->
+    </div>
+    <!-- End of info -->
+  </div>
+
+  <aside>
+    <nav id="nav">
+      <div class="nav-links">
+        <a href="/index.html">Back to Portal</a>
+      </div>
+    </nav>
+
+    <button id="nav-toggle" type="button">
+      <div class="patty-wrapper">
+        <div class="patty"></div>
+        <div class="patty"></div>
+        <div class="patty"></div>
+      </div>
+
+    </button>
+  </aside>
+
+
+  <script src="scripts/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- Start of Cookie Function -->
+  <script src="scripts/all.js"></script>
+  <script>
+    const cookieBox = document.querySelector(".cookie-banner"),
+      acceptBtn = cookieBox.querySelector("button");
+
+    acceptBtn.onclick = () => {
+      //setting cookie for certain time, after one month it'll be expired automatically
+      document.cookie = "CookieBy=CodingNepal; max-age=" + 60;
+      if (document.cookie) { //if cookie is set
+        cookieBox.classList.add("hide"); //hide cookie box
+      } else { //if cookie not set then alert an error
+        alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+      }
+    }
+    let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+    //if cookie is set then hide the cookie box else show it
+    checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+  </script>
+  <!-- End of Cookie Function -->
+
+  <script src="/js/nav.js"></script>
+</body>
+
+</html>
