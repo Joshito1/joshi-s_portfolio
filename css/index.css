@@ -32,11 +32,11 @@
 }
 
 .nav-links .img-1 {
-    background-image: url("/source/images/paint-palate-612x612.jpg");
+    background-image: url("../source/images/paint-palate-612x612.jpg");
 }
 
 .nav-links .img-2 {
-    background-image: url("/source/images/code.jpg");
+    background-image: url("../source/images/code.jpg");
 }
 
 
