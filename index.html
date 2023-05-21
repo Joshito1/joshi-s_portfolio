@@ -14,14 +14,15 @@
 </head>
 
 <body>
-    <main>
+    <main class="content">
+        <header>
+            <img class="profile-photo" src="source/profile/profile_picture.png" alt="" />
+            <div class="profile-txt-info">
+                <p class="name">Jose Luis Barcelo</p>
+                <p class="user-name">Joshi_El_Cubano</p>
+        </header>
         <div class="sign">
             <div class="inner-sign">
-                <img class="profile-photo" src="source/profile/profile_picture.png" alt="" />
-                <div class="profile-txt-info">
-                    <p class="name">Jose Luis Barcelo</p>
-                    <p class="user-name">Joshi_El_Cubano</p>
-                </div>
                 <div class="about-wrapper">
                     <div class="about">
                         <h2 class="about-title">
@@ -29,7 +30,7 @@
                         </h2>
                         <p>
                             Hello, I'm Jose Luis Barcelo, and welcome to my Portfolio. <br>
-                            <span>I am a</span> 3D artist specializing in using Blender. <br>
+                            I am a 3D artist specializing in using Blender. <br>
                             Web Developer using Html, Css, and javascript.<br>
                         </p>
                     </div>
@@ -38,25 +39,22 @@
         </div>
 
         <div class="portal">
-            <div class="nav-links">
-                <a href="subpages/3d-Portfolio/3d-portfolio.html">
-                    3d Art Portfolio
-                </a>
-                <div class="img img-1"></div>
-            </div>
-            <div class="nav-links">
-                <a href="subpages\web_dev-Portfolio\web_dev-portfolio.html">
-                    Website Developmet Portfolio
-                </a>
-                <div class="img img-2"></div>
-            </div>
+            <a class="link-1" href="subpages/3d-Portfolio/3d-portfolio.html">
+                <p>3d Art <br> Portfolio</p>
+            </a>
+            <a class="link-2" href="subpages\web_dev-Portfolio\web_dev-portfolio.html">
+                <p>Website Development <br> Portfolio</p>
+            </a>
         </div>
     </main>
 
-    <footer>
+    <footer class="content">
         <div></div>
     </footer>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/page-loader.js"></script>
 </body>
 
 </html>

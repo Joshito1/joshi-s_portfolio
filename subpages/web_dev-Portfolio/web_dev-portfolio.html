@@ -15,15 +15,14 @@
 
 
 <body>
-    <header>
-        <img class="profile-photo" src="../../source/profile/profile_picture.png" alt="" />
-        <div class="profile-txt-info">
-            <p class="name">Jose Luis Barcelo</p>
-            <p class="user-name">Joshi_El_Cubano</p>
-        </div>
-    </header>
-    <main>
-
+    <main class="content">
+        <header>
+            <img class="profile-photo" src="../../source/profile/profile_picture.png" alt="" />
+            <div class="profile-txt-info">
+                <p class="name">Jose Luis Barcelo</p>
+                <p class="user-name">Joshi_El_Cubano</p>
+            </div>
+        </header>
         <div class="sign">
             <div class="inner-sign">
                 <div>
@@ -35,7 +34,7 @@
                             About Me
                         </h2>
                         <p>
-                            Loading..
+                            In Progress..
                         </p>
                     </div>
                 </div>
@@ -43,33 +42,32 @@
         </div>
 
         <div class="portal">
-            <div class="nav-links">
-                <!-- mc_lads-website/index.html -->
-                <a id="link-1" href="#">
+            <!-- mc_lads-website/index.html -->
+            <a id="link-1" href="#">
+                <p>
                     MC Lads <br>
                     Coming soon..
-                </a>
-            </div>
-            <div class="nav-links">
-                <a id="link-2" href="ruckers-website/index.html">
+                </p>
+            </a>
+            <a id="link-2" href="ruckers-website/index.html">
+                <p>
                     Ruckers
-                </a>
-            </div>
+                </p>
+            </a>
         </div>
     </main>
 
 
-    <footer>
+    <footer class="content">
         <div></div>
     </footer>
 
     <aside>
-        <nav id="nav">
-            <div class="nav-links">
-                <a href="../../index.html">Back to Portal</a>
-            </div>
-        </nav>
-
+        <a href="../../index.html">
+            <nav id="nav">
+                <p>Back to Portal</p>
+            </nav>
+        </a>
         <button id="nav-toggle" type="button">
             <div class="patty-wrapper">
                 <div class="patty"></div>
@@ -80,7 +78,9 @@
         </button>
     </aside>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../js/nav.js"></script>
+    <script src="../../js/page-loader.js"></script>
 </body>
 
 </html>

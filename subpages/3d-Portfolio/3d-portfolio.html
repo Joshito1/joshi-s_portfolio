@@ -14,14 +14,14 @@
 </head>
 
 <body>
-    <header>
-        <img class="profile-photo" src="../../source/profile/profile_picture.png" alt="" />
-        <div class="profile-txt-info">
-            <p class="name">Jose Luis Barcelo</p>
-            <p class="user-name">Joshi_El_Cubano</p>
-        </div>
-    </header>
-    <main>
+    <main class="content">
+        <header>
+            <img class="profile-photo" src="../../source/profile/profile_picture.png" alt="" />
+            <div class="profile-txt-info">
+                <p class="name">Jose Luis Barcelo</p>
+                <p class="user-name">Joshi_El_Cubano</p>
+            </div>
+        </header>
         <div class="sign">
             <div class="inner-sign">
                 <div>
@@ -51,7 +51,7 @@
         </div>
     </main>
 
-    <section>
+    <section class="content">
         <div class="title">
             <h2>
                 The Hall of 3D Progress
@@ -164,35 +164,35 @@
     </section>
 
 
-    <p class="disclaimer">
-        <span class="excli">!:</span> I have videos too, But I am unable to post them here because of their size, I am
-        looking for other
-        alternatives.
-    </p>
-    <footer>
+    <footer class="content">
+        <p class="disclaimer">
+            <span class="excli">!:</span> I have videos too, But I am unable to post them here because of their size, I
+            am
+            looking for other
+            alternatives.
+        </p>
         <div></div>
     </footer>
 
     <aside>
-        <nav id="nav">
-            <div class="nav-links">
-                <a href="../../index.html">Back to Portal</a>
-            </div>
-        </nav>
-
+        <a href="../../index.html">
+            <nav id="nav">
+                <p>Back to Portal</p>
+            </nav>
+        </a>
         <button id="nav-toggle" type="button">
             <div class="patty-wrapper">
                 <div class="patty"></div>
                 <div class="patty"></div>
                 <div class="patty"></div>
             </div>
-
         </button>
     </aside>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../js/nav.js"></script>
+    <script src="../../js/page-loader.js"></script>
     <script src="js/lazy-loading.js"></script>
-
 </body>
 
 </html>

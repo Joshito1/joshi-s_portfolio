@@ -8,15 +8,38 @@
   box-sizing: border-box;
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
+  font-size: 1.125rem;
   font-family: 'Raleway', sans-serif;
-  background-color: rgb(30, 30, 30);
+  /* background-color: rgb(30, 30, 30); */
 }
 
 
 
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: min(70ch, 100% - 2rem);
+  min-height: 100vh;
+  /* margin: 1rem auto; */
+  margin-inline: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 /*  */
 .profile-photo {
+  display: block;
+  max-width: 10rem;
   border: 3px solid rgb(0, 81, 255);
   box-shadow: 0 0 13px 1px var(--neon-blue);
   border-radius: 50%;
@@ -24,95 +47,52 @@ body {
 
 
 
-/* header */
-header {
+/* Loader */
+#loader-container {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  transform: translate(-50%, -50%);
 }
 
-header .profile-photo {
-  width: 6em;
-
+#loader {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: #007bff;
+  box-shadow: 0 0 13px 1px var(--neon-blue);
+  transition: width 0.3s ease-in-out;
 }
 
-header .profile-txt-info {
+#loader-txt {
   margin-left: 10px;
-  line-height: 2em;
-  color: white;
-}
-
-header .profile-txt-info .name {
-  font-size: 1.5em;
-}
-
-header .profile-txt-info .roll {
-  font-size: 4em;
-  margin-top: 2rem;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 
-
-/* main */
-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 5rem;
-  min-height: 100vh;
+.content {
+  display: none;
 }
 
-.sign {
-  margin-top: 5rem;
-}
-
-.sign .inner-sign {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.sign .inner-sign .profile-txt-info {
-  line-height: 2em;
-  color: white;
-}
-
-.sign .inner-sign .profile-txt-info .name {
-  font-size: 1.5em;
-}
-
-.sign .roll {
-  font-size: 3em;
-  color: white;
-}
-
-div.about-wrapper {
-  margin-top: 3rem;
-}
-
-div.about-wrapper .about h2 {
-  margin: 0 1rem 1rem;
-  text-align: start;
-}
-
-div.about-wrapper .about {
-  padding: 1rem;
-  font-weight: bold;
-  color: white;
-}
 
 
 /* Footer */
 footer {
   padding: 5rem;
-  background-color: rgb(16, 16, 16);
+  background-color: rgb(15, 15, 15);
 }
 
 
 /* Media */
 /* ===== */
-/* @media screen and (min-width: 430px) {
+/* @media screen and (min-width: 470px) {
 
 } */
 

@@ -29,8 +29,6 @@ section .sorting p {
 }
 
 .gallery div.tiles {
-    display: flex;
-    align-items: end;
     width: 100%;
     background-color: #494949;
 }
@@ -57,9 +55,6 @@ p.disclaimer .excli {
 
 
 @media screen and (min-width: 700px) {
-    /* div.about-wrapper .about {
-        width: 60%;
-    } */
 
     .gallery {
         grid-template-columns: repeat(4, 1fr);
