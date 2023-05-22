@@ -7,15 +7,14 @@
 .portal p {
     font-size: 1.5rem;
     font-weight: 800;
-    text-decoration: none;
     width: 100%;
     padding: 1rem 1rem;
     color: white;
     background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / .2) 10%, hsl(0 0% 0% / 1));
 }
 
-.portal .link-1,
-.link-2 {
+.portal #link-1,
+#link-2 {
     margin: 2rem 0;
     padding: 3rem 0 0;
     border: 1px solid white;
@@ -26,11 +25,11 @@
     background-size: cover;
 }
 
-.portal .link-1 {
+.portal #link-1 {
     background-image: url("../source/images/paint-palate-612x612.jpg");
 }
 
-.portal .link-2 {
+.portal #link-2 {
     background-image: url("../source/images/code.jpg");
 }
 

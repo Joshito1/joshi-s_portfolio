@@ -1,6 +1,6 @@
 /* Portal nav */
 
-aside nav {
+aside #nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -14,12 +14,15 @@ aside nav {
     padding: 20px;
     border: 2px solid rgb(134, 130, 238);
     border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
     background-color: rgba(71, 71, 71, 0.976);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
-aside nav.active {
+aside #nav.active {
     right: 0%;
 }
 
@@ -88,25 +91,15 @@ aside #nav-toggle.active .patty-wrapper .patty:nth-child(3) {
 /* nav links */
 
 
+
 /* Keyframe */
 /* ======== */
-
-/* magical text */
-@keyframes background-pan {
-    from {
-        background-position: 0% center;
-    }
-
-    to {
-        background-position: -200% center;
-    }
-}
 
 
 
 /* Media */
 @media screen and (min-width: 470px) {
-    aside nav {
+    aside #nav {
         width: 25rem;
     }
 }
