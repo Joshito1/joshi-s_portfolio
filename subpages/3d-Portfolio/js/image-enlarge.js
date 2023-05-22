@@ -1,35 +1,32 @@
-const images = document.querySelectorAll('.gallery img');
+// Get all the image elements with the specified class
+var imageElements = document.getElementsByClassName('lazy loading');
 
-let currentImage;
+// Add event listeners to each image element
+for (var i = 0; i < imageElements.length; i++) {
+    imageElements[i].addEventListener('click', enlargeImage);
+}
 
-images.forEach((image) => {
-    image.addEventListener('click', () => {
-        if (currentImage) {
-            currentImage.classList.remove('active');
-        }
-        image.classList.add('active');
-        currentImage = image;
-    });
-});
+function enlargeImage(event) {
+    var img = event.target;
+    var info = img.dataset.info; // Get the info for the clicked image
 
-let startX;
-let scrollLeft;
-let isDown = false;
+    var modal = document.createElement('div');
+    modal.className = 'modal';
 
-document.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].pageX - document.querySelector('.gallery').offsetLeft;
-    scrollLeft = document.querySelector('.gallery').scrollLeft;
-    isDown = true;
-});
+    var modalImg = document.createElement('img');
+    modalImg.className = 'modal-content';
+    modalImg.src = img.src;
 
-document.addEventListener('touchend', () => {
-    isDown = false;
-});
+    var modalInfo = document.createElement('div');
+    modalInfo.className = 'modal-info';
+    modalInfo.innerHTML = info; // Use innerHTML to interpret the <br> tags as line breaks
 
-document.addEventListener('touchmove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.touches[0].pageX - document.querySelector('.gallery').offsetLeft;
-    const walk = (x - startX) * 3;
-    document.querySelector('.gallery').scrollLeft = scrollLeft - walk;
-});
+    modal.appendChild(modalImg);
+    modal.appendChild(modalInfo);
+
+    document.body.appendChild(modal);
+
+    modal.onclick = function () {
+        document.body.removeChild(modal);
+    };
+}

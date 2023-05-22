@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Pixel font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- universal / raleway font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/web_dev-portfolio.css">
@@ -17,7 +22,10 @@
 <body>
     <main class="content">
         <header>
-            <img class="profile-photo" src="../../source/profile/profile_picture.png" alt="" />
+            <div class="profile-container">
+                <h1 class="roll">Web <br> Development</h1>
+                <img class="profile-photo" src="../../source/profile/profile_picture.png" alt="" />
+            </div>
             <div class="profile-txt-info">
                 <p class="name">Jose Luis Barcelo</p>
                 <p class="user-name">Joshi_El_Cubano</p>
@@ -25,16 +33,17 @@
         </header>
         <div class="sign">
             <div class="inner-sign">
-                <div>
-                    <h1 class="roll">Web Development</h1>
-                </div>
                 <div class="about-wrapper">
                     <div class="about">
                         <h2 class="about-title">
                             About Me
                         </h2>
                         <p>
-                            In Progress..
+                            Step into the web development section of my portfolio! Throughout my two-year adventure,
+                            I've immersed myself in the realm of web development, mastering HTML, CSS, and JavaScript to
+                            bring ideas to life. Browse this section to discover my projects, showcasing my ability to
+                            craft engaging and responsive websites. Experience my growth as I continue to enhance my
+                            skills and create captivating online experiences.
                         </p>
                     </div>
                 </div>
@@ -42,11 +51,9 @@
         </div>
 
         <div class="portal">
-            <!-- mc_lads-website/index.html -->
-            <a id="link-1" href="#">
+            <a id="link-1" href="mc_lads-website/index.html">
                 <p>
-                    MC Lads <br>
-                    Coming soon..
+                    MC Lads
                 </p>
             </a>
             <a id="link-2" href="ruckers-website/index.html">

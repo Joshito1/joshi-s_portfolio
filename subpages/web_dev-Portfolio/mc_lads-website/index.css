@@ -82,6 +82,7 @@ nav a {
 .show {
   display: block;
 }
+
 /* Drop down End */
 
 /* Notification bell Start */
@@ -118,6 +119,7 @@ nav a {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-10px);
   }
@@ -127,6 +129,7 @@ nav a {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-10px);
   }
@@ -161,9 +164,11 @@ nav a {
   from {
     transform: scale(0.95);
   }
+
   50% {
     transform: scale(1);
   }
+
   to {
     transform: scale(0.95);
   }
@@ -173,13 +178,16 @@ nav a {
   from {
     -webkit-transform: scale(0.95);
   }
+
   50% {
     -webkit-transform: scale(1);
   }
+
   to {
     -webkit-transform: scale(0.95);
   }
 }
+
 /* End of Yellow splash text */
 
 header {
@@ -192,6 +200,7 @@ header {
   margin-bottom: 15em;
   padding: 0px 80px 0px 80px;
 }
+
 /* Tutorial Start */
 #tutorial {
   display: none;
@@ -299,6 +308,7 @@ header {
   height: 0;
   border: inset 14px #c6c6c6;
 }
+
 /* Tutorial End */
 
 /* Cookie consent Start */
