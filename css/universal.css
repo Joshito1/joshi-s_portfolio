@@ -15,6 +15,7 @@ html {
 body {
   font-size: 1.125rem;
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
   /* background-color: rgb(30, 30, 30); */
 }
 
@@ -22,19 +23,26 @@ body {
 
 main {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: min(70ch, 100% - 2rem);
+  width: min(100ch, 100% - 2rem);
   min-height: 100vh;
-  /* margin: 1rem auto; */
+  margin: 2rem 0;
   margin-inline: auto;
 }
 
-img {
-  display: block;
-  max-width: 100%;
+.profile-container {
+  position: relative;
 }
+
+.roll {
+  font-size: 1em;
+  position: absolute;
+
+}
+
+
 
 /*  */
 .profile-photo {
@@ -43,6 +51,10 @@ img {
   border: 3px solid rgb(0, 81, 255);
   box-shadow: 0 0 13px 1px var(--neon-blue);
   border-radius: 50%;
+}
+
+.about-wrapper {
+  margin: 3rem 0;
 }
 
 
@@ -85,7 +97,7 @@ img {
 
 /* Footer */
 footer {
-  padding: 5rem;
+  padding: 5rem 1rem;
   background-color: rgb(15, 15, 15);
 }
 

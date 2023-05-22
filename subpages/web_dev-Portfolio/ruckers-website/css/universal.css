@@ -313,6 +313,55 @@ footer .footer-content .footer-link-group .footer-links-container .footer-link a
   color: var(--clr-122);
 }
 
+
+
+/* pop up */
+div#popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.902);
+}
+
+div#popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+h1#popup-greeting {
+  text-align: center;
+}
+
+span#disc {
+  font-weight: 800;
+}
+
+button#closeButton {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  margin: 1rem 0 0;
+  background-color: var(--clr-194);
+  color: var(--clr-765);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button#closeButton:hover {
+  background-color: var(--clr-550);
+}
+
+
+
 /* Webiste responsiveness */
 /* Medium */
 @media screen and (min-width: 430px) {

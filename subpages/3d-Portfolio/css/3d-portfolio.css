@@ -1,6 +1,9 @@
 section {
     display: flex;
     flex-direction: column;
+    width: min(120ch, 100% - 0rem);
+    margin-inline: auto;
+    background-color: rgb(15, 15, 15);
 }
 
 section .title h2 {
@@ -11,7 +14,7 @@ section .title h2 {
 }
 
 section .sorting {
-    background-color: rgb(16, 16, 16)
+    background-color: inherit;
 }
 
 section .sorting p {
@@ -31,21 +34,64 @@ section .sorting p {
 .gallery div.tiles {
     width: 100%;
     background-color: #494949;
-}
-
-.gallery .tiles div.tile-info {
-    position: absolute;
+    transition: .3s ease-in;
 }
 
 .gallery div.tiles img,
 .gallery div.tiles video {
-    width: max(20vw, 100%);
+    display: block;
+    width: max(10dvw, 100%);
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    cursor: pointer;
 }
 
+.gallery div.tiles:hover {
+    transform: scale(1.01);
+    z-index: 9999;
+}
+
+.loading {
+    filter: blur(40px) grayscale(100%);
+}
+
+.loaded {
+    filter: blur(0) grayscale(0);
+    transition: 0.7s ease-in-out;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    /* Add this line to stack the image and info vertically */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.902);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-info {
+    color: #fff;
+    margin-top: 10px;
+    /* Add some spacing between the image and info */
+    white-space: pre-line;
+    /* Allow line breaks in the info text */
+}
+
+
 p.disclaimer {
-    margin: 5rem 0 0 1rem;
+    margin: 5rem 0;
     color: white;
 }
 

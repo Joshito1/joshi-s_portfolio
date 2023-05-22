@@ -14,20 +14,15 @@
 </head>
 
 <body>
-  <!-- Start of Navigation bar -->
   <nav>
-    <!-- Start of original nav-bar links -->
     <a class="nav-left" href="pages/mc_server_info.html">Minecraft Servers</a>
     <div class="nav-right">
       <a class="change-log" href="pages/change_log.html">Change Log</a>
     </div>
-    <!-- End of original nav-bar links -->
     <div class="nav-center">
       <a class="logo" href="#">MC Lads</a>
     </div>
   </nav>
-  <!-- End of Navigation bar -->
-  <!-- Start of drop_down and links -->
   <div class="dropdown-div">
     <div id="dropdown-info" class="dropdown-content">
       <a href="pages/mc_server_info.html">Minecraft Servers</a>
@@ -41,26 +36,18 @@
       <img id="dropdown-png" src="images/Drop_down.png" alt="drop_down">
     </button>
   </div>
-  <!-- End of drop_down and links -->
 
-
-  <!-- Start of notification bell -->
   <div class="notification-bell-btn-div">
     <a class="notification-bell-btn" href="pages/notifications.html">
       <div class="notification-bell-png-div"><img src="images/notification_bell.png" alt="Notifications"
           class="notification-bell-png"></div>
-      <!-- <div class="notification-bell-banner">0</div> -->
     </a>
   </div>
-  <!-- end of notification bell -->
 
-  <!-- Start of Text -->
   <header>
-    <!-- Start of Yellow splash text -->
     <div class="tilt">
       <div id="status" class="pop"></div>
     </div>
-    <!-- End of Yellow splash text -->
 
     <div class="text">
       Hello there lads, I Welcome you To.. The MC Lads Website! <br>
@@ -69,9 +56,7 @@
       enjoy this website and hope you enjoy the rest of your day :D
     </div>
   </header>
-  <!-- End of Text -->
 
-  <!-- Start of tutorial -->
   <div id="tutorial">
     <!-- Start of tutorial boxes -->
     <div id="tutorial_boxes">
@@ -150,9 +135,7 @@
     </div>
   </div> -->
   <!-- End of Cookie banner -->
-  <!-- Start of footer -->
   <div class="footer-container">
-    <!-- Start of footer nav links -->
     <div class="footer">
       <div class="footer-heading footer1">
         <h2>Pages</h2>
@@ -162,7 +145,6 @@
         <a href="pages/about_the_dev.html">About the Developer</a>
         <a href="pages/credits.html">Credits</a>
       </div>
-      <!-- Start of footer contact -->
       <div class="footer-heading footer2">
         <!--  -->
         <h2>Social Media/Contacts</h2>
@@ -172,26 +154,22 @@
         </div>
       </div>
     </div>
-    <!-- Start of info -->
     <div id="info">
       <a class="tutorial_button" id="tutorial">
         <img onclick="tutorial_box_appear()" id="tutorial_png" src="images/Tutorial.png" alt="Tutorial">
       </a>
-      <!-- Start of Version Text -->
       <div class="version_div">
         <p class="version">Version: 2.1</p>
       </div>
-      <!-- End of Version Text -->
     </div>
-    <!-- End of info -->
   </div>
 
   <aside>
-    <nav id="nav">
-      <div class="nav-links">
-        <a href="../../../index.html">Back to Portal</a>
-      </div>
-    </nav>
+    <a href="../../../index.html">
+      <nav id="nav">
+        Back to Portal
+      </nav>
+    </a>
 
     <button id="nav-toggle" type="button">
       <div class="patty-wrapper">
@@ -203,12 +181,11 @@
     </button>
   </aside>
 
-
-  <script src="scripts/index.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <!-- Start of Cookie Function -->
+  <script src="../../../js/nav.js"></script>
+  <script src="scripts/index.js"></script>
   <script src="scripts/all.js"></script>
-  <script>
+  <!-- <script>
     const cookieBox = document.querySelector(".cookie-banner"),
       acceptBtn = cookieBox.querySelector("button");
 
@@ -224,10 +201,9 @@
     let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
     //if cookie is set then hide the cookie box else show it
     checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
-  </script>
+  </script> -->
   <!-- End of Cookie Function -->
 
-  <script src="../../../js/nav.js"></script>
 </body>
 
 </html>
