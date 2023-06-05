@@ -111,7 +111,6 @@ $(document).ready(function () {
 
 
 
-
 // $(document).ready(function () {
 //     $('body').append('<div style="" id="loader-container"><div id="loader"></div></div>');
 
