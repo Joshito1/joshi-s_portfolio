@@ -40,14 +40,14 @@
 // });
 
 $(document).ready(function () {
-    var loaderContainer = $('<div id="loader-container"><div id="loader"><div id="loader-txt">Loading...</div></div></div>');
+    var loaderContainer = $('<div id="loader-container"><div id="loader"><div id="loader-bar"></div><div id="loader-txt">Loading...</div></div></div>');
     var loader = $('#loader');
+    var loaderBar = $('#loader-bar');
     var loaderTxt = $('#loader-txt');
-    var content = $('.content');
+    var content = $('#content');
 
     $('body').append(loaderContainer);
 
-    var progressInterval;
     var loadingProgress = 0;
     var increment = 1;
 
@@ -55,7 +55,7 @@ $(document).ready(function () {
         if (event.lengthComputable) {
             var percentComplete = (event.loaded / event.total) * 100;
             loadingProgress = percentComplete;
-            loader.css('width', loadingProgress + '%');
+            loaderBar.css('width', loadingProgress + '%');
             loaderTxt.text('Loading ' + Math.round(loadingProgress) + '%');
         }
     }
@@ -68,9 +68,9 @@ $(document).ready(function () {
     }
 
     function startProgress() {
-        progressInterval = setInterval(function () {
+        var progressInterval = setInterval(function () {
             loadingProgress += increment;
-            loader.css('width', loadingProgress + '%');
+            loaderBar.css('width', loadingProgress + '%');
             loaderTxt.text('Loading ' + Math.round(loadingProgress) + '%');
 
             if (loadingProgress >= 100) {
@@ -80,17 +80,34 @@ $(document).ready(function () {
         }, 100);
     }
 
-    var loadingTimeout = setTimeout(function () {
-        startProgress();
-    }, 1000); // Adjust the timeout value as needed
+    var resourcesPending = false;
+    var resourceTimeout;
+
+    function checkResources() {
+        $('img').each(function () {
+            if (!this.complete || typeof this.naturalWidth === 'undefined' || this.naturalWidth === 0) {
+                resourcesPending = true;
+                return false; // Exit the loop if any resource is pending
+            }
+        });
+
+        if (resourcesPending) {
+            resourceTimeout = setTimeout(function () {
+                startProgress();
+            }, 1000); // Adjust the timeout value as needed
+        } else {
+            removeLoader();
+        }
+    }
 
     window.addEventListener('progress', updateProgress);
     window.addEventListener('load', function () {
-        clearTimeout(loadingTimeout);
+        clearTimeout(resourceTimeout);
         removeLoader();
     });
-});
 
+    checkResources();
+});
 
 
 
