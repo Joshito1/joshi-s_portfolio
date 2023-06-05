@@ -63,6 +63,45 @@ main {
 #loader-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  z-index: 9999;
+}
+
+#loader {
+  width: 80%;
+  max-width: 400px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#loader-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+
+#loader-txt {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+/* #loader-container {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -86,7 +125,7 @@ main {
   margin-left: 10px;
   font-size: 20px;
   font-weight: 900;
-}
+} */
 
 
 .content {
