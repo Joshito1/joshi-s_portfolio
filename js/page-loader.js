@@ -44,7 +44,7 @@ $(document).ready(function () {
     var loader = $('#loader');
     var loaderBar = $('#loader-bar');
     var loaderTxt = $('#loader-txt');
-    var content = $('#content');
+    var content = $('.content');
 
     $('body').append(loaderContainer);
 
@@ -108,6 +108,7 @@ $(document).ready(function () {
 
     checkResources();
 });
+
 
 
 
