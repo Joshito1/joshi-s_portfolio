@@ -48,7 +48,7 @@ section .sorting p {
 
 .gallery div.tiles:hover {
     transform: scale(1.01);
-    z-index: 9999;
+    z-index: 1;
 }
 
 .loading {
