@@ -2,12 +2,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     text-decoration: none;
     margin: 2rem 0;
     padding: 3rem;
     border: 1px solid white;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.portal #message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    font-weight: initial;
+    margin-left: 6px;
 }
 
 .portal p {
