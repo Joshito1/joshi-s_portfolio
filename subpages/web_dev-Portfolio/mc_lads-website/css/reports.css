@@ -1,0 +1,73 @@
+.messeges-list {
+    color: black;
+}
+
+.messege-box {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: aliceblue;
+    color: inherit;
+    cursor: pointer;
+}
+
+.messege-box h2 {
+    position: relative;
+}
+
+.howto {
+    position: absolute;
+    left: 0;
+    font-size: small;
+}
+
+.date {
+    position: absolute;
+    right: 0;
+    font-size: initial;
+}
+
+.messege-box-trigger {
+    background: transparent;
+    border: 0;
+    font: inherit;
+    color: inherit;
+}
+
+.messege-box-trigger::before,
+.messege-box-trigger::after {
+    position: absolute;
+    right: 1em;
+    content: "";
+    display: block;
+    width: 1em;
+    height: 5px;
+    background: currentcolor;
+    transition: transform 500ms;
+}
+
+.messege-box-trigger::after {
+    rotate: 90deg;
+    translate: 0 -1em;
+}
+
+.messege-box-trigger[aria-expanded="true"]::before,
+.messege-box-trigger[aria-expanded="true"]::after {
+    transform: rotate(45deg);
+}
+
+
+.messege-box-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+}
+
+.messege-box-content[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+}
+
+.messege-box-content div {
+    overflow: hidden;
+}
