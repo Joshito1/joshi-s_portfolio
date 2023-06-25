@@ -1,209 +1,86 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" type="text/css">
-  <title>MC Lads Website</title>
-  <link rel="stylesheet" href="styles/all.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="../../../css/universal-navigation.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../../../css/universal-navigation.css">
+    <title>Home | Mc Lads</title>
 </head>
 
 <body>
-  <nav>
-    <a class="nav-left" href="pages/mc_server_info.html">Minecraft Servers</a>
-    <div class="nav-right">
-      <a class="change-log" href="pages/change_log.html">Change Log</a>
-    </div>
-    <div class="nav-center">
-      <a class="logo" href="#">MC Lads</a>
-    </div>
-  </nav>
-  <div class="dropdown-div">
-    <div id="dropdown-info" class="dropdown-content">
-      <a href="pages/mc_server_info.html">Minecraft Servers</a>
-      <hr class="ddbrk">
-      <a href="pages/change_log.html">Change Log</a>
-    </div>
-  </div>
+    <main>
+        <header>
+            <h1>
+                MC Lads
+            </h1>
+        </header>
+        <nav>
+            <div class="left-nav">
+                <a href="html/reports.html" class="left-link">
+                    <img src="ultils/images/notification_bell.png" alt="">
+                </a>
+            </div>
+            <a href="#" style="color: rgb(0, 80, 0);">Home</a>
+            <a href="html/servers.html">Servers</a>
+        </nav>
+        <div class="description">
+            <div class="tilt">
+                <div id="status" class="pop"></div>
+            </div>
 
-  <div id="dropdown-div-btn" class="dropdown-div">
-    <button onclick="myFunction()" class="dropbtn">
-      <img id="dropdown-png" src="images/Drop_down.png" alt="drop_down">
-    </button>
-  </div>
-
-  <div class="notification-bell-btn-div">
-    <a class="notification-bell-btn" href="pages/notifications.html">
-      <div class="notification-bell-png-div"><img src="images/notification_bell.png" alt="Notifications"
-          class="notification-bell-png"></div>
-    </a>
-  </div>
-
-  <header>
-    <div class="tilt">
-      <div id="status" class="pop"></div>
-    </div>
-
-    <div class="text">
-      Hello there lads, I Welcome you To.. The MC Lads Website! <br>
-      In here I will be putting the information to the MC Dedicated Server. If you have any ideas on improving the
-      website Please let me know. So I hope you
-      enjoy this website and hope you enjoy the rest of your day :D
-    </div>
-  </header>
-
-  <div id="tutorial">
-    <!-- Start of tutorial boxes -->
-    <div id="tutorial_boxes">
-      <!--  -->
-      <div id="box_1" style="display: none;">
-        <div class="tutorial_txt">
-          <p>Would you like to start a quick tutorial to learn about the website?</p>
+            About This Website:<br> This website is used to publish dedicated Minecraft
+            servers for
+            easier access to.
+            <br> <br>
+            <span>Check the servers in the "Servers" link Above.</span>
+            About This Website:<br> This website is used to publish dedicated Minecraft
+            servers for
+            easier access to.
+            <br> <br>
+            <span>Check the servers in the "Servers" link Above.</span>
         </div>
-        <button class="cancel" type="button" onclick="cancel_tutorial()">Not now</button>
-        <button class="next" type="button" onclick="next_box2(); hide_current1()">Sure</button>
-        <div class="tutorial_counter">
+    </main>
+
+
+    <footer>
+        <div class="contact">
+            <h2>
+                Contact:
+            </h2>
+            <p>
+                <span id="discord">
+                    Discord: joshi_el_cubano
+                </span>
+                <br>
+                <br>
+                Email:
+                <a href="mailto:baruserojoshi@gmail.com"
+                    style="text-decoration-style: dotted; color: white;">baruserojoshi@gmail.com</a>
+            </p>
         </div>
-      </div>
-      <!--  -->
-      <div id="box_2" style="display: none;">
-        <div class="pointer_1"></div>
-        <div class="tutorial_txt">
-          <p>How the name suggests, this is where you'll get the MC servers information and how to enter it. Click
-            "Minecraft Servers" to
-            see
-            the server information. Else, click the Next button.</p>
-        </div>
-        <button class="back" type="button" onclick="previous_tutorial_1(); hide_current2()">previous</button>
-        <button class="next" type="button" onclick="next_box3(); hide_current2()">Next</button>
-        <div class="tutorial_counter">
-          <p>1 of 3</p>
-        </div>
-      </div>
-      <!--  -->
-      <div id="box_3" style="display: none;">
-        <div class="pointer_2"></div>
-        <div class="tutorial_txt">
-          <p>In this page you will find the changes that have been made, and will come overtime. You will also Find
-            "About the Developer" and "Credit" pages. Click "Change log" to see more, and then again to continue the
-            tutorial,
-            click
-            the questoin mark inside the Change Log
-            page. Else, Click Next.</p>
-        </div>
-        <button class="back" type="button" onclick="previous_tutorial_2(); hide_current3()">previous</button>
-        <button class="next" type="button" onclick="next_box4();hide_current3()">Next</button>
-        <div class="tutorial_counter">
-          <p>2 of 3</p>
-        </div>
-      </div>
-      <!--  -->
-      <div id="box_4" style="display: none;">
-        <div class="pointer_3"></div>
-        <div class="tutorial_txt">
-          <p>Last but not least, the Notification page/Bell. In here you will get notifications of the website pages and
-            more. Click it to see what has been posted. Else, Click Finish.</p>
-        </div>
-        <button class="back" type="button" onclick="previous_tutorial_3(); hide_current4()">previous</button>
-        <button class="finish" type="button" onclick="hide_current4()">Finish</button>
-        <div class="tutorial_counter">
-          <p>3 of 3</p>
-        </div>
-      </div>
-    </div>
-    <!-- End of tutorial boxes -->
-  </div>
-  <!-- End of tutorial -->
+    </footer>
 
+    <aside>
+        <a href="../../../index.html">
+            <nav id="nav">Back to Portal
+            </nav>
+        </a>
+        <button id="nav-toggle" type="button">
+            <div class="patty-wrapper">
+                <div class="patty"></div>
+                <div class="patty"></div>
+                <div class="patty"></div>
+            </div>
+        </button>
+    </aside>
 
-
-  <!-- Start of Cookie banner -->
-  <!-- <div class="cookie-banner">
-    <div class="cookie-banner-div">
-      <p class="cookie-banner-txt">
-        The Website uses cookies for the best possible experience. It will not sell users Information.
-      </p>
-      <div class="cookie-buttons">
-        <button class="ok-btn">Ok</button>
-        <button onclick="location.href='cookie_info.html'" type="button" class="cookie-info">Learn more</button>
-      </div>
-    </div>
-  </div> -->
-  <!-- End of Cookie banner -->
-  <div class="footer-container">
-    <div class="footer">
-      <div class="footer-heading footer1">
-        <h2>Pages</h2>
-        <a href="index.html">MC Lads Homepage</a>
-        <a href="pages/mc_server_info.html">Minecraft Servers</a>
-        <a href="pages/change_log.html">Change Log</a>
-        <a href="pages/about_the_dev.html">About the Developer</a>
-        <a href="pages/credits.html">Credits</a>
-      </div>
-      <div class="footer-heading footer2">
-        <!--  -->
-        <h2>Social Media/Contacts</h2>
-        <div>Discord: El_Cubano#8182</div>
-        <div>Email:
-          <a class="footer-email" href="mailto:baruserojoshi@gmail.com">baruserojoshi@gmail.com</a>
-        </div>
-      </div>
-    </div>
-    <div id="info">
-      <a class="tutorial_button" id="tutorial">
-        <img onclick="tutorial_box_appear()" id="tutorial_png" src="images/Tutorial.png" alt="Tutorial">
-      </a>
-      <div class="version_div">
-        <p class="version">Version: 2.1</p>
-      </div>
-    </div>
-  </div>
-
-  <aside>
-    <a href="../../../index.html">
-      <nav id="nav">
-        Back to Portal
-      </nav>
-    </a>
-
-    <button id="nav-toggle" type="button">
-      <div class="patty-wrapper">
-        <div class="patty"></div>
-        <div class="patty"></div>
-        <div class="patty"></div>
-      </div>
-
-    </button>
-  </aside>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="../../../js/nav.js"></script>
-  <script src="scripts/index.js"></script>
-  <script src="scripts/all.js"></script>
-  <!-- <script>
-    const cookieBox = document.querySelector(".cookie-banner"),
-      acceptBtn = cookieBox.querySelector("button");
-
-    acceptBtn.onclick = () => {
-      //setting cookie for certain time, after one month it'll be expired automatically
-      document.cookie = "CookieBy=CodingNepal; max-age=" + 60;
-      if (document.cookie) { //if cookie is set
-        cookieBox.classList.add("hide"); //hide cookie box
-      } else { //if cookie not set then alert an error
-        alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
-      }
-    }
-    let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
-    //if cookie is set then hide the cookie box else show it
-    checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
-  </script> -->
-  <!-- End of Cookie Function -->
-
+    <script src="js/splash-text.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../../js/nav.js"></script>
 </body>
 
 </html>

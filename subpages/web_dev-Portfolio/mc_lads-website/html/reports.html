@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../universal.css">
+    <link rel="stylesheet" href="../css/reports.css">
+    <title>Reports | Mc Lads</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>
+                MC Lads
+            </h1>
+        </header>
+        <nav>
+            <div class="left-nav">
+                <a href="#" class="left-link">
+                    <img src="../ultils/images/notification_bell.png" alt="">
+                </a>
+            </div>
+            <a href="../index.html">Home</a>
+            <a href="./servers.html">Servers</a>
+        </nav>
+        <section>
+            <h2>
+                Messeges
+            </h2>
+            <div>
+                <p>
+                    " Feels lonely in here doesn't it? Please come join me or at least come over to see me once in a
+                    while.. Dont you think this "World" could grow more? Could become bigger?.. We could build Wonders
+                    together!! "
+                </p>
+                <div>...</div>
+            </div>
+            <!--  -->
+            <div class="messeges-list">
+                <!-- <div class="messege-box">
+                    <h2 id="messege-box-title">
+                        <button class="messege-box-trigger" aria-controls="messege-box1-content" aria-expanded="false">
+                            <p>Hello World! <br> <span class="howto">- click to <span
+                                        class="toggle-text">expand</span></span>
+                            </p>
+                            <div class="date">6/25/2023 at 05:20</div>
+                        </button>
+                    </h2>
+                    <div class="messege-box-content" role="region" aria-labelledby="messege-box1-title"
+                        aria-hidden="true" id="messege-box1-content">
+                        <div>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, amet!</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class=" contact">
+            <h2>
+                Contact:
+            </h2>
+            <p>
+                <span id="discord">
+                    Discord: joshi_el_cubano
+                </span>
+                <br>
+                <br>
+                Email:
+                <a href="mailto:baruserojoshi@gmail.com"
+                    style="text-decoration-style: dotted; color: white;">baruserojoshi@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const messeges_list = document.querySelector(".messeges-list");
+
+        messeges_list.addEventListener("click", (e) => {
+            const activePanel = e.target.closest(".messege-box");
+            if (!activePanel) return;
+            toggle_Messege_box(activePanel);
+        });
+
+        function toggle_Messege_box(panelToActivate) {
+            const activeButton = panelToActivate.querySelector("button");
+            const activePanel = panelToActivate.querySelector(".messege-box-content");
+            const activePanelIsOpened = activeButton.getAttribute("aria-expanded");
+            const toggleText = panelToActivate.querySelector(".toggle-text");
+
+            if (activePanelIsOpened === "true") {
+                panelToActivate.querySelector("button").setAttribute("aria-expanded", false);
+                panelToActivate.querySelector(".messege-box-content").setAttribute("aria-hidden", true);
+                toggleText.textContent = "expand";
+            } else {
+                panelToActivate.querySelector("button").setAttribute("aria-expanded", true);
+                panelToActivate.querySelector(".messege-box-content").setAttribute("aria-hidden", false);
+                toggleText.textContent = "shrink";
+            }
+        }
+    </script>
+</body>
+
+</html>
