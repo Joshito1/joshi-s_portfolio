@@ -2,6 +2,14 @@
     display: flex;
     justify-content: center;
     text-decoration: none;
+    margin: 2rem 0;
+    padding: 3rem 0 0;
+    border: 1px solid #171615;
+    border-radius: 10px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .portal p {
@@ -11,18 +19,6 @@
     padding: 1rem 1rem;
     color: white;
     background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / .2) 10%, hsl(0 0% 0% / 1));
-}
-
-.portal #link-1,
-#link-2 {
-    margin: 2rem 0;
-    padding: 3rem 0 0;
-    border: 1px solid white;
-    border-radius: 10px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 .portal #link-1 {
