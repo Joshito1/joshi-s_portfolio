@@ -16,7 +16,7 @@ body {
   font-size: 1.125rem;
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
-  /* background-color: rgb(30, 30, 30); */
+  /* background-color: rgb(18, 18, 18); */
 }
 
 
@@ -85,9 +85,11 @@ main {
 }
 
 #loader-bar {
+  position: relative;
   width: 0%;
   height: 100%;
-  background-color: #ffffff;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.6);
   transition: width 0.3s ease-in-out;
 }
 
@@ -95,7 +97,6 @@ main {
   margin-left: 5px;
   font-size: 16px;
   font-weight: bold;
-  color: #000000;
 }
 
 /* #loader-container {
