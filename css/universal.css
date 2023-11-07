@@ -1,154 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
 :root {
-  --neon-blue: rgb(98, 148, 255);
+    --debug-padding: 1rem;
+
+    --blur: 15px;
+    --neon-blue: rgb(98, 148, 255);
+    --alpha-bg: rgba(255, 255, 255, 0.7);
+    --alpha-border: 1px solid rgba(0, 0, 0, 0.1);
+    --alpha-box_shad: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  color-scheme: light dark;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-size: 1.125rem;
-  font-family: 'Raleway', sans-serif;
-  overflow-x: hidden;
-  /* background-color: rgb(18, 18, 18); */
+    font-size: 1.125rem;
+    font-family: 'Tilt Neon', sans-serif;
+    overflow-x: hidden;
+    color: white;
+    background-color: rgb(40, 40, 40);
+}
+
+/* Debug */
+#debugButton {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    border: none;
+    color: rgb(41, 41, 41);
+    background-color: transparent;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#debugMenuContainer {
+    display: flex;
+    position: absolute;
+    min-width: 100%;
+    z-index: 1;
+}
+
+#debugMenu {
+    display: none;
+    padding: var(--debug-padding);
+
+    background-color: rgba(128, 255, 0, 0.960);
+}
+
+#information {
+    position: initial;
+    background-color: rgba(0, 100, 0, 0.960);
+}
+
+/* "on" and "off" indicators */
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: red;
+}
+
+.indicator.on {
+    background-color: green;
+}
+
+#clocksContainer {
+    position: relative;
+}
+
+.clocks {
+    display: block;
+}
+
+.clock {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(50%, 50%);
+}
+
+/* Analog Clock Styles */
+#analogClock {
+    width: 200px;
+    height: 180px;
+}
+
+div.dig,
+div.hour,
+div.min,
+div.sec {
+    position: absolute;
+}
+
+div.hour,
+div.min,
+div.sec {
+    width: 2.5px;
+    height: 2.5px;
+    font-size: 2.5px;
+}
+
+div.dig {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    padding-top: 10px
+}
+
+div.min {
+    background: #0000FF;
+}
+
+div.hour {
+    background: #000000;
+}
+
+div.sec {
+    background: #FF0000;
+}
+
+/* Digital Clock Styles */
+#digitalClock {
+    font-size: 1.5em;
+    text-align: center;
 }
 
 
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: min(100ch, 100% - 2rem);
-  min-height: 100vh;
-  margin: 2rem 0;
-  margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(100ch, 100% - 2rem);
+    min-height: 100vh;
+    margin: 2rem 0;
+    margin-inline: auto;
 }
 
 .profile-container {
-  position: relative;
+    position: relative;
 }
 
 .roll {
-  text-shadow: 1px 1px white;
-  font-size: 1em;
-  position: absolute;
-
+    text-shadow: 1px 1px white;
+    font-size: 1em;
+    position: absolute;
 }
 
 
 
 /*  */
 .profile-photo {
-  display: block;
-  max-width: 10rem;
-  border: 3px solid rgb(0, 81, 255);
-  box-shadow: 0 0 13px 1px var(--neon-blue);
-  border-radius: 50%;
+    display: block;
+    max-width: 10rem;
+    border: 3px solid rgb(0, 81, 255);
+    box-shadow: 0 0 13px 1px var(--neon-blue);
+    border-radius: 50%;
 }
 
 .about-wrapper {
-  margin: 3rem 0;
+    margin: 3rem 0;
 }
 
 
 
 /* Loader */
 #loader-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: inherit;
 }
 
 #loader {
-  width: 80%;
-  max-width: 400px;
-  background-color: #007bff;
-  box-shadow: 0 0 13px 1px var(--neon-blue);
-  border-radius: 5px;
-  overflow: hidden;
+    width: 80%;
+    max-width: 400px;
+    background-color: #007bff;
+    box-shadow: 0 0 13px 1px var(--neon-blue);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 #loader-bar {
-  position: relative;
-  width: 0%;
-  height: 100%;
-  z-index: 9999;
-  background-color: rgba(255, 255, 255, 0.6);
-  transition: width 0.3s ease-in-out;
+    position: relative;
+    width: 0%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: width 0.3s ease-in-out;
 }
 
 #loader-txt {
-  margin-left: 5px;
-  font-size: 16px;
-  font-weight: bold;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* #loader-container {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  height: 10px;
-  border-radius: 10px;
-  background-color: #f0f0f0;
-  transform: translate(-50%, -50%);
-}
 
-#loader {
-  width: 0%;
-  height: 100%;
-  border-radius: inherit;
-  background-color: #007bff;
-  box-shadow: 0 0 13px 1px var(--neon-blue);
-  transition: width 0.3s ease-in-out;
+.link-Container {
+    width: 100%;
 }
-
-#loader-txt {
-  margin-left: 10px;
-  font-size: 20px;
-  font-weight: 900;
-}
- */
-
 
 .content {
-  display: none;
+    display: none;
 }
-
-
 
 /* Footer */
 footer {
-  padding: 5rem 1rem;
-  background-color: rgb(15, 15, 15);
+    padding: 1rem 1rem 5rem;
+    background-color: rgb(30, 30, 30);
 }
 
 
 /* Media */
 /* ===== */
-/* @media screen and (min-width: 470px) {
+@media screen and (min-width: 420px) {
+    #debugMenuContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-} */
+}
 
-/* @media screen and (min-width: 1024px) {
+@media screen and (max-width: 420px) {
+    #debugMenuContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-} */
+}
+
+@media screen and (min-width: 1024px) {
+    #information {
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .link-Container {
+        width: 100dvw;
+    }
+}

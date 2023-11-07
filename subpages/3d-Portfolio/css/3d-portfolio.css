@@ -1,7 +1,7 @@
 section {
     display: flex;
     flex-direction: column;
-    width: min(120ch, 100% - 0rem);
+    width: min(160ch, 100% - 0rem);
     margin-inline: auto;
     background-color: rgb(15, 15, 15);
 }
@@ -10,7 +10,6 @@ section .title h2 {
     font-size: 30px;
     text-align: center;
     margin: 3rem 0 3rem 0;
-    color: #ffffff;
 }
 
 section .sorting {
@@ -20,7 +19,6 @@ section .sorting {
 section .sorting p {
     text-align: end;
     margin: 1rem 1rem;
-    color: #fff;
 }
 
 .gallery {
@@ -51,6 +49,14 @@ section .sorting p {
     z-index: 1;
 }
 
+.tile-info {
+    position: relative;
+}
+
+.tile-info p {
+    position: absolute;
+}
+
 .loading {
     filter: blur(40px) grayscale(100%);
 }
@@ -60,11 +66,10 @@ section .sorting p {
     transition: 0.7s ease-in-out;
 }
 
+/* The Modal */
 .modal {
     display: flex;
     flex-direction: column;
-    /* Add this line to stack the image and info vertically */
-    justify-content: center;
     align-items: center;
     position: fixed;
     z-index: 9999;
@@ -72,32 +77,108 @@ section .sorting p {
     left: 0;
     width: 100%;
     height: 100%;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.902);
+
+    background-color: rgb(0, 0, 0, 0.902);
+}
+
+/* Modal Content */
+.modal_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: min(140ch, 100% - 0rem);
+    height: 100%;
 }
 
 .modal-content {
-    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+    max-height: 90%;
+}
+
+.modal-number {
+    margin-left: 1rem;
+}
+
+.modal .modal_container .modal-content img {
+    align-self: center;
+    max-width: 100%;
     max-height: 90%;
 }
 
 .modal-info {
-    color: #fff;
     margin-top: 10px;
-    /* Add some spacing between the image and info */
+    text-align: center;
     white-space: pre-line;
-    /* Allow line breaks in the info text */
 }
 
+/* The Close Button */
+#close_container {
+    display: flex;
+    justify-content: right;
+    padding: 0 10px 0 0;
+    width: 100%;
+    border-bottom: 1px solid black;
 
-p.disclaimer {
-    margin: 5rem 0;
-    color: white;
+    background-color: rgb(15, 15, 15);
+}
+
+.close {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalNavContainer {
+    width: 100%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 p.disclaimer .excli {
     font-size: 20px;
 }
+
+/* .tip-container {
+
+} */
 
 
 @media screen and (min-width: 700px) {

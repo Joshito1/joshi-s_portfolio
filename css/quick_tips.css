@@ -1,0 +1,94 @@
+/* Animation for the notification */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+/* Add animation to the notification container */
+.slide-in {
+    animation: slideIn 0.3s ease-in-out;
+}
+
+.slide-out {
+    animation: slideOut 0.3s ease-in-out;
+}
+
+
+.tips_Wrap {
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 15px;
+    width: 100%;
+    color: black;
+    z-index: 9999;
+}
+
+/* Box */
+.tips_container {
+    position: relative;
+    padding: 1rem 2.5rem;
+    width: min(60ch, 100% - 2rem);
+    border-radius: 20px;
+
+    background-color: var(--alpha-bg);
+    border: var(--alpha-border);
+    box-shadow: var(--alpha-box_shad);
+
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+}
+
+
+/* Close */
+.tips_container .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+
+    background-color: var(--alpha-bg);
+    border: var(--alpha-border);
+    box-shadow: var(--alpha-box_shad);
+
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+}
+
+.line {
+    position: absolute;
+    width: 2px;
+    height: 60%;
+    background-color: rgb(100, 100, 100);
+    transform-origin: 50%;
+}
+
+.line-1 {
+    transform: rotate(45deg);
+}
+
+.line-2 {
+    transform: rotate(-45deg);
+}

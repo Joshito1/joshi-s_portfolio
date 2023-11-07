@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 0 !important;
+}
+
+.portal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(60ch, 100% - 2rem);
+    min-height: 75vh;
+    border-radius: 5px;
+    background-color: rgb(40, 40, 40);
+    border: 2px solid rgb(0, 81, 255);
+    box-shadow: 0 0 20px 0px rgb(98, 148, 255);
+}
+
+div#header {
+    text-shadow: 0px 5px 6px rgb(98, 148, 255);
+    margin-bottom: -15px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+div.links {
+    width: 100%;
+    text-align: center;
+}
+
+div.links a {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: relative;
+    margin: 5rem 0;
+    padding: 1.5rem;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    border-top: 5px dotted rgb(25, 25, 25);
+    border-bottom: 5px dotted rgb(25, 25, 25);
+}
+
+
+/* splash text animation */
+@-webkit-keyframes action {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes action {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.tilt {
+    position: absolute;
+    right: 5rem;
+    bottom: 3.5rem;
+    left: 0;
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+#status {
+    line-height: 30px;
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+    color: rgb(219, 216, 22);
+    text-shadow: 1px 1px #0000008f;
+}
+
+.pop {
+    animation: pop 0.58s infinite;
+    -webkit-animation: pop 0.58s infinite;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.95);
+    }
+}
+
+@-webkit-keyframes pop {
+    from {
+        -webkit-transform: scale(0.95);
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+    }
+
+    to {
+        -webkit-transform: scale(0.95);
+    }
+}
