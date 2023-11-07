@@ -25,7 +25,7 @@ main {
     position: relative;
     margin-top: 3rem;
     margin-inline: auto;
-    width: min(75ch, 100% - 2rem);
+    width: min(95ch, 100% - 1rem);
     min-height: 100vh;
 }
 
@@ -42,19 +42,25 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
+    height: 50px;
     background-color: silver;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 nav div.left-nav {
     position: absolute;
-    left: 0;
+    left: -5px;
     display: block;
+}
+
+nav div.left-nav .left-link {
+    width: 4rem;
 }
 
 nav a {
     font-weight: 700;
-    color: green;
+    color: rgb(0, 80, 0);
+    font-size: 1rem;
 }
 
 div.description {

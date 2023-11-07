@@ -34,6 +34,11 @@ function showAndCreateNotification(customMessage) {
     const tipContain = document.createElement('div');
     tipContain.className = 'tips_container';
 
+    // Love to my little Sister, Camilla
+    const love = document.createElement('div');
+    love.id = 'heart';
+    love.innerHTML = '\uD83D\uDC8C'; //Easter Egg
+
     const tipCloseX = document.createElement('div');
     tipCloseX.className = 'close';
 
@@ -65,6 +70,7 @@ function showAndCreateNotification(customMessage) {
     tip.appendChild(tipP);
     tipCloseX.appendChild(lineOne);
     tipCloseX.appendChild(lineTwo);
+    tipContain.appendChild(love);
     tipContain.appendChild(tipCloseX);
     tipContain.appendChild(tip);
     tipWrap.appendChild(tipContain);
@@ -106,7 +112,7 @@ function showNotification(notification) {
         // Remove the notification after a few seconds
         setTimeout(() => {
             slideOutAndRemoveNotification(notification);
-        }, 15000); // adjust the timeout as needed
+        }, 20000); // adjust the timeout as needed
     }, delayBeforeShow);
 }
 
@@ -122,4 +128,4 @@ images.forEach((image) => {
 });
 
 // Call showTip with a specific key and custom message for each tip
-showTip('tip', 'Want to go back at one point? Click the "Universal Navigation button" on the bottom right. (Blue Button with three lines)');
+showTip('tip', 'Want to go back at one point? Click the "Universal Navigation button" on the bottom right. (Blue Button)');
