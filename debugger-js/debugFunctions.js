@@ -22,6 +22,7 @@ function toggleAllInfo() {
         showWindowSizeInfo();
         showLocationInfo();
         showNavigatorInfo();
+        showWebStorage();
     } else {
         information.style.display = 'none';
     }
@@ -31,6 +32,28 @@ function toggleAllInfo() {
 // Page Reload
 function reloadPage() {
     location.reload();
+}
+
+function showWebStorage() {
+    const storageListsDiv = document.getElementById('webStorageInfo');
+    const localStorageKeys = Object.keys(localStorage);
+    const sessionStorageKeys = Object.keys(sessionStorage);
+    if (storageListsDiv.style.display === 'none' || storageListsDiv.style.display === '') {
+        storageListsDiv.style.display = 'block';
+        storageListsDiv.innerHTML = `
+        <p class="infoTitle">Local Storage Keys:</p>
+        <p>
+            ${localStorageKeys.map(key => `<li>${key}</li>`).join('')}
+        </p>
+        <br>
+        <p class="infoTitle">Session Storage Keys:</p>
+        <p>
+            ${sessionStorageKeys.map(key => `<li>${key}</li>`).join('')}
+        </p>
+    `;
+    } else {
+        storageListsDiv.style.display = 'none';
+    }
 }
 
 // Clear Local storage
@@ -46,12 +69,13 @@ function clearLocalStorageReload() {
     alert('Local Storage has been cleared. Page will reload momentarily..');
 }
 
-// Function to clear the session
+// clear the session storage
 function clearSession() {
     sessionStorage.clear();
     alert('Session has been cleared.');
 }
 
+// Clear session storage With reload
 function clearSessionReload() {
     sessionStorage.clear();
     location.reload();
@@ -133,6 +157,30 @@ function showNavigatorInfo() {
     }
 }
 
+// Function to toggle the "Show Both Clocks" button
+function toggleBothClocks() {
+    const analogClockDiv = document.getElementById('analogClock');
+    const digitalClockDiv = document.getElementById('digitalClock');
+
+    if (analogClockDiv.style.display === 'none' || analogClockDiv.style.display === '') {
+        analogClockDiv.style.display = 'block';
+        digitalClockDiv.style.display = 'block';
+        clock(); // Start the analog clock
+
+        // Start the digital clock
+        const digitalClockDisplay = document.getElementById('digitalClock');
+        setInterval(myTimer, 1000);
+
+        function myTimer() {
+            const d = new Date();
+            digitalClockDisplay.innerHTML = d.toLocaleTimeString();
+        }
+    } else {
+        analogClockDiv.style.display = 'none';
+        digitalClockDiv.style.display = 'none';
+    }
+}
+
 // Analog Clock
 function showAnalogClock() {
     const analogClockDiv = document.getElementById('analogClock');
@@ -194,29 +242,6 @@ function showDigitalClock() {
             document.getElementById("digitalClock").innerHTML = d.toLocaleTimeString();
         }
     } else {
-        digitalClockDiv.style.display = 'none';
-    }
-}
-// Function to toggle the "Show Both Clocks" button
-function toggleBothClocks() {
-    const analogClockDiv = document.getElementById('analogClock');
-    const digitalClockDiv = document.getElementById('digitalClock');
-
-    if (analogClockDiv.style.display === 'none' || analogClockDiv.style.display === '') {
-        analogClockDiv.style.display = 'block';
-        digitalClockDiv.style.display = 'block';
-        clock(); // Start the analog clock
-
-        // Start the digital clock
-        const digitalClockDisplay = document.getElementById('digitalClock');
-        setInterval(myTimer, 1000);
-
-        function myTimer() {
-            const d = new Date();
-            digitalClockDisplay.innerHTML = d.toLocaleTimeString();
-        }
-    } else {
-        analogClockDiv.style.display = 'none';
         digitalClockDiv.style.display = 'none';
     }
 }

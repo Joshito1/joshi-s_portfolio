@@ -22,6 +22,9 @@ $(document).ready(function () {
             if (loadingProgress >= 100) {
                 clearInterval(progressInterval);
                 removeLoader();
+
+                // Call showTip after the loader is complete
+                showTip('tip', 'Want to go back at one point? Click the "Universal Navigation button" on the bottom right. (Blue Button)');
             }
         }, 100);
     }
@@ -38,38 +41,3 @@ $(document).ready(function () {
     xhr.open('GET', window.location.href);
     xhr.send();
 });
-
-
-
-
-
-// $(document).ready(function () {
-//     $('body').append('<div id="loader-container"><div id="loader"><div id="loader-txt">Loading...</div></div></div>');
-
-//     var progressInterval;
-//     var loadingProgress = 0;
-//     var increment = 1;
-
-//     function startProgress() {
-//         progressInterval = setInterval(function () {
-//             loadingProgress += increment;
-//             $('#loader').css('width', loadingProgress + '%');
-
-//             if (loadingProgress >= 100) {
-//                 clearInterval(progressInterval);
-//                 removeLoader();
-//             }
-//         }, 0); // Adjust the interval duration as desired
-//     }
-
-//     function removeLoader() {
-//         $('#loader-container').fadeOut(500, function () {
-//             $(this).remove();
-//             $('.content').fadeIn();
-//         });
-//     }
-
-//     $(window).on('load', function () {
-//         setTimeout(startProgress, 0); // Wait for page load plus two seconds
-//     });
-// });

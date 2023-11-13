@@ -4,6 +4,7 @@
 
 :root {
     --debug-padding: 1rem;
+    --debug-opacity: 0.910;
 
     --blur: 15px;
     --neon-blue: rgb(98, 148, 255);
@@ -51,12 +52,13 @@ body {
     display: none;
     padding: var(--debug-padding);
 
-    background-color: rgba(128, 255, 0, 0.960);
+    background-color: rgba(128, 255, 0, var(--debug-opacity));
 }
 
 #information {
     position: initial;
-    background-color: rgba(0, 100, 0, 0.960);
+    padding: var(--debug-padding);
+    background-color: rgba(0, 100, 0, var(--debug-opacity));
 }
 
 /* "on" and "off" indicators */
