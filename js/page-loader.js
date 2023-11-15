@@ -22,9 +22,6 @@ $(document).ready(function () {
             if (loadingProgress >= 100) {
                 clearInterval(progressInterval);
                 removeLoader();
-
-                // Call showTip after the loader is complete
-                showTip('tip', 'Want to go back at one point? Click the "Universal Navigation button" on the bottom right. (Blue Button)');
             }
         }, 100);
     }
@@ -35,6 +32,16 @@ $(document).ready(function () {
             $('.content').fadeIn();
         });
     }
+
+    xhr.addEventListener('load', function () {
+        startProgress();
+
+        // Call showTip after the loader is complete
+        xhr.addEventListener('loadend', function () {
+            removeLoader();
+            showTip('tip', 'Want to go back at one point? Click the "Universal Navigation button" on the bottom right. (Blue Button)');
+        });
+    });
 
     xhr.addEventListener('progress', updateProgress);
     xhr.addEventListener('load', startProgress);
