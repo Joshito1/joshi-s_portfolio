@@ -1,44 +1,58 @@
-/* Portal nav */
+:root {
+    --link-border: white solid 1px;
+}
 
+/* Universal Nav Menu */
 aside #universal_nav {
     position: fixed;
-    bottom: -100%;
+    right: -100%;
+    bottom: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     padding: 10px 1.5rem;
-    width: 100%;
+    width: 70%;
+    height: 99%;
     background-color: #333;
-
+    border: black solid 2px;
+    border-radius: 5px;
+    z-index: 1;
 
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
 aside #universal_nav.active {
-    bottom: 0;
+    right: 0;
 }
 
-aside #universal_nav a {
-    font-size: 1.3rem;
-    text-decoration: none;
-    background: linear-gradient(to right, rgb(134, 130, 238), rgb(197, 192, 255), rgb(4, 0, 128), rgb(4, 0, 128));
-    background-size: 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-}
-
-aside #universal_nav h2 {
-    font-weight: lighter;
-    font-size: 1rem;
+aside #universal_nav h1 {
+    /* font-weight: lighter; */
     margin: 0;
-    color: white;
+}
+
+aside a {
+    margin-top: 1.5rem;
+    font-size: 2.3rem;
+    text-decoration: none;
+    text-shadow: rgb(98, 148, 255) 1px 0 10px;
+    border-top: var(--link-border);
+    border-bottom: var(--link-border);
+    color: rgb(0, 195, 255);
+}
+
+aside #quickAccess_Links a {
+    font-size: 1.2rem;
+}
+
+aside #quickAccess_Links,
+aside #links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 
-/* nav button */
+/* Universal Nav button */
 aside #univ_nav_button {
     cursor: pointer;
     position: fixed;
@@ -100,9 +114,10 @@ aside #univ_nav_button.active .patty-wrapper .patty:nth-child(3) {
 
 /* Media */
 @media screen and (min-width: 470px) {
-    aside #nav {
-        width: 25rem;
+    aside #universal_nav {
+        width: 20rem;
     }
+
 }
 
 @media screen and (min-width: 1400px) {
