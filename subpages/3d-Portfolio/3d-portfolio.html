@@ -193,20 +193,34 @@
     </footer>
 
     <aside>
-        <div id="universal_nav">
-            <h1>
-                Universal Navigation
-            </h1>
-            <div id="links">
-                <a href="../../index.html">Home &#8962;</a>
-            </div>
-            <h3 style="margin: 10rem 0 0;">Quick Access</h3>
-            <div id="quickAccess_Links">
-                <a href="">Web Dev Portfolio</a>
-                <a href="">MC Lads</a>
-                <a href="">Ruckers</a>
+        <div id="universal_nav_bg">
+            <div id="universal_nav">
+                <div id="scrollMessage">Scrolling Enabled</div>
+                <h1>
+                    Universal Navigation
+                </h1>
+                <div id="links" style="margin: 0 0 8rem;">
+                    <a href="../../index.html">Home &#8962;</a>
+                </div>
+                <p class="alerts">Links Not connected</p>
+                <h3 style="margin: 0 0 5px;">Quick Access</h3>
+
+                <ul id="quickAccess_Links">
+                    <li>
+                        <a href="">Web Dev Portfolio</a>
+                    </li>
+                    <ul>
+                        <li>
+                            <a href="">MC Lads</a>
+                        </li>
+                        <li>
+                            <a href="">Ruckers</a>
+                        </li>
+                    </ul>
+                </ul>
             </div>
         </div>
+
         <button id="univ_nav_button" type="button">
             <div class="patty-wrapper">
                 <div class="patty"></div>
@@ -216,6 +230,26 @@
         </button>
     </aside>
 
+    <script>
+        // Check for overflow and show scrolling message if necessary
+        function checkOverflow() {
+            var content = document.getElementById('universal_nav');
+            var scrollMessage = document.getElementById('scrollMessage');
+
+            // Compare the client height and scroll height of the content
+            if (content.clientHeight < content.scrollHeight) {
+                content.style.overflow = 'auto'; // Enable scrolling
+                scrollMessage.style.display = 'block'; // Show scrolling message
+            } else {
+                content.style.overflow = 'hidden'; // Disable scrolling
+                scrollMessage.style.display = 'none'; // Hide scrolling message
+            }
+        }
+
+        // Call the function on page load and resize
+        window.addEventListener('load', checkOverflow);
+        window.addEventListener('resize', checkOverflow);
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../../js/page-loader.js"></script>
     <script src="../../js/nav.js"></script>
