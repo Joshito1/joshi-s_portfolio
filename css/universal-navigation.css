@@ -1,19 +1,9 @@
 :root {
-    --link-border: white solid 1px;
+    --nav-menu-border: rgb(255, 0, 0) solid 2px;
 }
 
-.alerts {
+aside .current {
     color: red;
-}
-
-#scrollMessage {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    font-size: 16px;
-    color: #5b5b5b;
 }
 
 /* Universal Nav Menu */
@@ -41,13 +31,22 @@ aside #universal_nav {
     position: fixed;
     top: 0;
     right: -100%;
-    padding: 10px 1.5rem;
+    padding: 10px 1.5rem 5rem;
     width: 70%;
     height: 100%;
     background-color: #1a1a1a;
+    color: white;
+    border-left: var(--nav-menu-border);
 
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    overflow: auto;
+}
+
+aside h1,
+aside h2 {
+    margin: 0;
+    color: white;
 }
 
 aside #universal_nav.active {
@@ -55,23 +54,23 @@ aside #universal_nav.active {
     overscroll-behavior: contain;
 }
 
-aside #universal_nav h2 {
-    margin: 0;
-    color: white;
-}
-
-aside a {
-    margin-top: 10px;
-    font-size: 2.3rem;
-    text-decoration: none;
-    text-shadow: rgb(98, 148, 255) 1px 0 10px;
-    border-top: var(--link-border);
-    border-bottom: var(--link-border);
-    color: rgb(0, 195, 255);
+aside #quickAccess_Links,
+aside #links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 aside #quickAccess_Links a {
     font-size: 1.2rem;
+}
+
+aside a {
+    margin-top: 10px;
+    font-size: 2rem;
+    text-decoration: none;
+    text-shadow: rgb(98, 148, 255) 1px 0 10px;
+    color: rgb(0, 195, 255);
 }
 
 ul {
@@ -82,13 +81,6 @@ ul {
 
 li {
     margin-top: 10px;
-}
-
-aside #quickAccess_Links,
-aside #links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 

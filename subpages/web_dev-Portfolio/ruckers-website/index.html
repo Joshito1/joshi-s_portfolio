@@ -228,15 +228,33 @@
   </div>
 
   <aside>
-    <div id="universal_nav">
-      <h2>
-        Universal Navigation
-      </h2>
-      <a href="../../../index.html">
-        <p>
-          Home
-        </p>
-      </a>
+    <div id="universal_nav_bg">
+      <div id="universal_nav">
+        <h1>
+          Universal Navigation
+        </h1>
+        <div id="links" style="margin: 0 0 8rem;">
+          <a href="../../../index.html">Home &#8962;</a>
+        </div>
+        <hr color="red">
+        <h3 style="margin: 0 0 5px;">Quick Access</h3>
+        <ul id="quickAccess_Links">
+          <li>
+            <a href="../web_dev-Portfolio/web_dev-portfolio.html">Web Dev Portfolio</a>
+          </li>
+          <ul>
+            <li>
+              <a href="../mc_lads-website/index.html">MC Lads</a>
+            </li>
+            <li>
+              <a class="current" href="#">Ruckers</a>
+            </li>
+          </ul>
+          <li style="margin-top: 2em;">
+            <a href="../../3d-Portfolio/3d-portfolio.html">3D Portfolio</a>
+          </li>
+        </ul>
+      </div>
     </div>
     <button id="univ_nav_button" type="button">
       <div class="patty-wrapper">
@@ -245,6 +263,15 @@
         <div class="patty"></div>
       </div>
     </button>
+  </aside>
+
+  <button id="univ_nav_button" type="button">
+    <div class="patty-wrapper">
+      <div class="patty"></div>
+      <div class="patty"></div>
+      <div class="patty"></div>
+    </div>
+  </button>
   </aside>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
