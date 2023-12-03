@@ -32,7 +32,8 @@ section .sorting p {
 .gallery div.tiles {
     width: 100%;
     background-color: #494949;
-    transition: .3s ease-in;
+    -webkit-transition: 0.3 ease-in;
+    transition: 0.3s ease-in;
 }
 
 .gallery div.tiles img,
@@ -45,6 +46,7 @@ section .sorting p {
 }
 
 .gallery div.tiles:hover {
+    -webkit-transform: scale(1.01);
     transform: scale(1.01);
     z-index: auto;
 }
@@ -63,6 +65,7 @@ section .sorting p {
 
 .loaded {
     filter: blur(0) grayscale(0);
+    -webkit-transition: 0.7s ease-in-out;
     transition: 0.7s ease-in-out;
 }
 
@@ -153,10 +156,11 @@ section .sorting p {
     margin-top: -50px;
     font-weight: bold;
     font-size: 20px;
-    transition: 0.6s ease;
     border-radius: 0 5px 5px 0;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
 }
 
 /* Position the "next button" to the right */

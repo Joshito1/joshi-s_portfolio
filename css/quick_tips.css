@@ -50,8 +50,8 @@
     border: var(--alpha-border);
     box-shadow: var(--alpha-box_shad);
 
-    backdrop-filter: blur(var(--blur));
     -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
 }
 
 #heart {
@@ -79,8 +79,8 @@
     border: var(--alpha-border);
     box-shadow: var(--alpha-box_shad);
 
-    backdrop-filter: blur(var(--blur));
     -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
 }
 
 .line {
@@ -88,13 +88,16 @@
     width: 2px;
     height: 60%;
     background-color: rgb(100, 100, 100);
+    -webkit-transform-origin: 50%;
     transform-origin: 50%;
 }
 
 .line-1 {
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .line-2 {
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
