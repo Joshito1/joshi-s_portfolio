@@ -106,6 +106,29 @@ nav {
   background-color: var(--clr-765);
 }
 
+nav .burger-ext_Link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+}
+
+nav .exterior-menu-links a {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-700);
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--clr-194);
+}
+
+nav .exterior-menu-links {
+  transition: all 0.3s ease-in-out;
+}
+
+nav .exterior-menu-links.fade {
+  opacity: 0;
+}
+
 nav .hamburger {
   display: block;
   cursor: pointer;
@@ -257,7 +280,7 @@ main {
 /* ======== */
 
 footer {
-  margin: 5rem 0 0;
+  margin: 20rem 0 0;
   padding: 1rem 30px 0;
   background-color: var(--clr-690);
   box-shadow: var(--shadow);
@@ -389,8 +412,7 @@ button#closeButton:hover {
 
 /* large */
 @media screen and (min-width: 1024px) {
-
-  nav .hamburger {
+  nav .burger-ext_Link-wrapper {
     display: none;
   }
 
