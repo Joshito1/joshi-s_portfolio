@@ -116,9 +116,6 @@ function showNotification(notification) {
     }, delayBeforeShow);
 }
 
-// Get all the Images
-const images = document.querySelectorAll('.lazy.enlarged');
-
 // Add a click event listener to each image
 images.forEach((image) => {
     image.addEventListener('click', () => {

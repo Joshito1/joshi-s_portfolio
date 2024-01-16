@@ -38,14 +38,15 @@ body {
 
     -webkit-user-select: none;
     user-select: none;
-    z-index: 1;
+    z-index: 4;
 }
 
 #debugMenuContainer {
     display: flex;
     position: absolute;
+    top: 0;
     min-width: 100%;
-    z-index: 1;
+    z-index: 3;
 }
 
 #debugMenu {
@@ -156,20 +157,20 @@ main {
 }
 
 .roll {
+    position: absolute;
     text-shadow: 1px 1px white;
     font-size: 1em;
-    position: absolute;
+    z-index: 3;
 }
 
-
-
 /*  */
-.profile-photo {
+header .profile-photo,
+header .ambient__container {
     display: block;
     max-width: 10rem;
-    border: 3px solid rgb(0, 81, 255);
-    box-shadow: 0 0 13px 1px var(--neon-blue);
     border-radius: 50%;
+    /* border: 1px solid rgb(0, 81, 255);
+    box-shadow: 0 0 13px 1px var(--neon-blue); */
 }
 
 .about-wrapper {

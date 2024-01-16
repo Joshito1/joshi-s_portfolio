@@ -7,5 +7,5 @@ const universal_menu = document.querySelector('#universal_nav');
 universal_hamburger.addEventListener('click', () => {
     universal_hamburger.classList.toggle('active');
     universal_menu.classList.toggle('active');
-    universal_menu_bg.classList.toggle('active')
+    universal_menu_bg.classList.toggle('active');
 });

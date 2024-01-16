@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/3d-portfolio.css">
     <link rel="stylesheet" href="../../css/quick_tips.css">
     <link rel="stylesheet" href="../../css/universal.css">
@@ -13,13 +14,12 @@
 </head>
 
 <body data-tip-page="savePoint">
-    <script src="../../debugger-js/debugMenu.js"></script>
     <button id="debugButton">Debug</button>
     <main class="content">
         <header>
             <div class="profile-container">
                 <h1 class="roll">3D Art</h1>
-                <img class="profile-photo" src="../../source/profile/profile_picture.png" alt="">
+                <img class="profile-photo" src="../../source/profile/profile_picture.png" alt="Profile Picture">
             </div>
             <div class="profile-txt-info">
                 <p class="name">Jose Luis Barcelo</p>
@@ -53,7 +53,7 @@
                 Sorted by Most recent (Descending):
             </p>
         </div>
-        <div class="gallery" id="myModal">
+        <div class="gallery">
             <!--  -->
             <div class="tiles">
                 <img class="lazy enlarged" src="https://via.placeholder.com/1920x1080"
@@ -130,10 +130,6 @@
                         Videos Coming Soon
                     </p>
                 </div>
-                <video poster="source/renders/videos/posters/rgb-cube.png" class="lazy" preload="auto">
-                    <source src="source/renders/videos/mp4/0001-0100.mp4" type="video/mp4">
-                    <source src="source/renders/videos/webm/0001-0100.webm" type="video/webm">
-                </video>
             </div>
             <!-- money -->
             <div class="tiles">
@@ -142,10 +138,6 @@
                         Videos Coming Soon
                     </p>
                 </div>
-                <video class="lazy" preload="auto">
-                    <source src="source/renders/videos/mp4/Utopian money.blend0001-0525.mp4" type="video/mp4">
-                    <source src="source/renders/videos/webm/Utopian money.blend0001-0525.webm" type="video/webm">
-                </video>
             </div>
             <!-- community -->
             <div class="tiles">
@@ -154,9 +146,6 @@
                         Videos Coming Soon
                     </p>
                 </div>
-                <video class="lazy" preload="auto">
-                    <source src="source/renders/videos/mp4/utopian comunnity.blend0001-0700.mp4" type="video/mp4">
-                    <source src="source/renders/videos/webm/utopian comunnity.blend0001-0700.webm" type="video/webm">
                 </video>
             </div>
             <!--  -->
@@ -171,10 +160,6 @@
                         Videos Coming Soon
                     </p>
                 </div>
-                <video class="lazy" preload="auto">
-                    <source src="source/renders/videos/mp4/0001-0300.mp4" type="video/mp4">
-                    <source src="source/renders/videos/webm/0001-0300.webm" type="video/webm">
-                </video>
             </div>
             <!--  -->
             <div class="tiles">
@@ -198,27 +183,29 @@
                 <h1>
                     Universal Navigation
                 </h1>
-                <div id="links" style="margin: 0 0 8rem;">
+                <div id="links">
                     <a href="../../index.html">Home &#8962;</a>
                 </div>
-                <hr color="red">
-                <h3 style="margin: 0 0 5px;">Quick Access</h3>
-                <ul id="quickAccess_Links">
-                    <li>
-                        <a href="../web_dev-Portfolio/web_dev-portfolio.html">Web Dev Portfolio</a>
-                    </li>
-                    <ul>
+                <hr>
+                <div class="quickAccess_Links_wrapper">
+                    <h3>Quick Access</h3>
+                    <ul id="quickAccess_Links">
                         <li>
-                            <a href="../web_dev-Portfolio/mc_lads-website/index.html">MC Lads</a>
+                            <a href="../web_dev-Portfolio/web_dev-portfolio.html">Web Dev Portfolio</a>
                         </li>
-                        <li>
-                            <a href="../web_dev-Portfolio/ruckers-website/index.html">Ruckers</a>
+                        <ul>
+                            <li>
+                                <a href="../web_dev-Portfolio/mc_lads-website/index.html">MC Lads</a>
+                            </li>
+                            <li>
+                                <a href="../web_dev-Portfolio/ruckers-website/index.html">Ruckers</a>
+                            </li>
+                        </ul>
+                        <li style="margin-top: 2em;">
+                            <a class="current" href="#">3D Portfolio </a>
                         </li>
                     </ul>
-                    <li style="margin-top: 2em;">
-                        <a class="current" href="#">3D Portfolio </a>
-                    </li>
-                </ul>
+                </div>
             </div>
         </div>
         <button id="univ_nav_button" type="button">
@@ -230,12 +217,43 @@
         </button>
     </aside>
 
+    <!-- Modal -->
+    <div class="modal" id="myModal" style="display: none;">
+        <div id="modalTopNav">
+            <div class="modal-number"></div>
+            <div id="modal-controls">
+                <div class="dropdown">
+                    <button class="modal-control-btns" style="font-size: 19px;">
+                        More <i class="ri-arrow-drop-down-line"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <button class="dropdown-btns modal-control-btns" id="toggleSwipeButton"
+                            onclick="toggleSwipe()">Toggle
+                            Swipe</button>
+                    </div>
+                </div>
+                <button class="modal-control-btns" id="toggleVis" onclick="toggleVis()">
+                    <i class="ri-eye-fill"></i>
+                </button>
+                <button class="modal-control-btns close" id="closeX">&times;</button>
+            </div>
+        </div>
+        <img id="modalImg" alt="Modal Image/Render">
+        <div class="modalNavContainer">
+            <a class="prev" onclick="showPreviousImage();">&#10094;</a>
+            <a class="next" onclick="showNextImage();">&#10095;</a>
+        </div>
+        <p class="modal-info"></p>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../../js/page-loader.js"></script>
     <script src="../../js/nav.js"></script>
     <script src="js/lazy-loading.js"></script>
     <script src="js/image-lightbox.js"></script>
+    <script src="../../js/dynamic-icons.js"></script>
     <script src="../../js/quick_tips.js"></script>
+    <script src="../../debugger-js/debugMenu.js"></script>
     <script src="../../debugger-js/debugFunctions.js"></script>
     <script src="../../debugger-js/debugIndicators.js"></script>
     <script src="../../debugger-js/debugInfoUpdater.js"></script>

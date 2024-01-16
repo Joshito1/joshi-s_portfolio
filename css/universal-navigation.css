@@ -1,9 +1,10 @@
 :root {
-    --nav-menu-border: rgb(255, 0, 0) solid 2px;
+    --nav-menu-border: rgb(87, 87, 87) solid 2px;
 }
 
-aside .current {
-    color: red;
+aside .current,
+aside hr {
+    color: rgb(255, 0, 0);
 }
 
 /* Universal Nav Menu */
@@ -13,17 +14,17 @@ aside #universal_nav_bg {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
 
     -webkit-transition: all 0.3 ease-in-out;
     transition: all 0.3s ease-in-out;
-    opacity: 0;
     pointer-events: none;
-    z-index: auto;
+    z-index: 3;
 }
 
 aside #universal_nav_bg.active {
-    pointer-events: all;
     opacity: 1;
+    pointer-events: all;
 }
 
 aside #universal_nav {
@@ -50,6 +51,13 @@ aside h2 {
     color: white;
 }
 
+aside a {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
 aside #universal_nav.active {
     right: 0;
     overscroll-behavior: contain;
@@ -60,23 +68,15 @@ aside #links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 1rem 0 8rem;
 }
 
 aside #quickAccess_Links a {
     font-size: 1.2rem;
 }
 
-aside a {
-    margin-top: 10px;
-    font-size: 2rem;
-    text-decoration: none;
-    text-shadow: rgb(98, 148, 255) 1px 0 10px;
-    color: rgb(0, 195, 255);
-}
-
 ul {
     display: block;
-    list-style-type: '-';
     padding-inline-start: 40px;
 }
 
@@ -101,11 +101,11 @@ aside #univ_nav_button {
     outline: none;
     background-color: lightslategrey;
 
+    z-index: 3;
     -webkit-transition-timing-function: ease;
     -webkit-transition-duration: 5ms;
     transition-timing-function: ease;
     transition-duration: 5ms;
-
 }
 
 aside #univ_nav_button .patty {
