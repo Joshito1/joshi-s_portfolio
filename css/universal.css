@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
 
 
 :root {
@@ -141,44 +142,6 @@ div.sec {
 
 
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: min(100ch, 100% - 2rem);
-    min-height: 100vh;
-    margin: 2rem 0;
-    margin-inline: auto;
-}
-
-.profile-container {
-    position: relative;
-}
-
-.roll {
-    position: absolute;
-    text-shadow: 1px 1px white;
-    font-size: 1em;
-    z-index: 3;
-}
-
-/*  */
-header .profile-photo,
-header .ambient__container {
-    display: block;
-    max-width: 10rem;
-    border-radius: 50%;
-    /* border: 1px solid rgb(0, 81, 255);
-    box-shadow: 0 0 13px 1px var(--neon-blue); */
-}
-
-.about-wrapper {
-    margin: 3rem 0;
-}
-
-
-
 /* Loader */
 #loader-container {
     display: flex;
@@ -252,17 +215,4 @@ footer {
         align-items: flex-start;
     }
 
-}
-
-@media screen and (min-width: 1024px) {
-    #information {
-        position: absolute;
-        right: 0;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .link-Container {
-        width: 100dvw;
-    }
 }

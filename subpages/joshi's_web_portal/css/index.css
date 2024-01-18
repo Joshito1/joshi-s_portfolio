@@ -1,52 +1,43 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 main {
-    margin: 0 !important;
-}
-
-.portal-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: min(60ch, 100% - 2rem);
-    min-height: 75vh;
-    border-radius: 5px;
-    background-color: rgb(40, 40, 40);
-    border: 2px solid rgb(0, 81, 255);
-    box-shadow: 0 0 20px 0px rgb(98, 148, 255);
+    min-height: 100dvh;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-div#header {
-    text-shadow: 0px 5px 6px rgb(98, 148, 255);
-    margin-bottom: -15px;
-    text-align: center;
-    color: white;
-    z-index: 1;
-}
-
-div.links {
-    width: 100%;
-    text-align: center;
-}
-
-div.links a {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+#portal-container {
     position: relative;
-    margin: 5rem 0;
-    padding: 1.5rem;
-    font-size: 50px;
+    padding: 1rem;
+    width: min(50ch, 100% - 2rem);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(50, 50, 50);
+}
+
+#portal {
+    padding: 7rem 0;
+}
+
+hr {
+    width: 100%;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    position: relative;
+    padding: 3rem 0;
+    width: 100%;
     text-decoration: none;
+    text-align: center;
+    font-size: 30px;
     color: white;
-    background-color: rgb(30, 30, 30);
-    border-top: 5px dotted rgb(25, 25, 25);
-    border-bottom: 5px dotted rgb(25, 25, 25);
 }
 
 
@@ -73,9 +64,9 @@ div.links a {
 
 .tilt {
     position: absolute;
-    right: 5rem;
-    bottom: 3.5rem;
-    left: 0;
+    bottom: 2rem;
+    right: 0;
+    left: 5rem;
     -ms-transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
@@ -83,7 +74,7 @@ div.links a {
 
 #status {
     line-height: 30px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 100;
     text-align: center;
     color: rgb(219, 216, 22);
