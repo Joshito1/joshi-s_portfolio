@@ -6,6 +6,7 @@
     text-decoration: none;
     margin: 2rem 0;
     padding: 3rem;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.7);
     border: 1px solid #171615;
     border-radius: 10px;
     overflow: hidden;

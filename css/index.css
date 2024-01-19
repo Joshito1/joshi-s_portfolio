@@ -4,6 +4,7 @@
     text-decoration: none;
     margin: 2rem 0;
     padding: 2rem 0 0;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.7);
     border: 1px solid #171615;
     border-radius: 10px;
     overflow: hidden;
@@ -33,10 +34,7 @@
     padding: 0;
     text-align: center;
     color: white;
-    text-shadow: 0px 5px 6px rgb(98, 148, 255);
     background-color: rgb(40, 40, 40);
-    border: 2px solid rgb(0, 81, 255);
-    box-shadow: 0 0 20px 0px rgb(98, 148, 255);
 }
 
 #link-3 p {

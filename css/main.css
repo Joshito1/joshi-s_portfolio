@@ -15,9 +15,13 @@ main {
 
 .roll {
     position: absolute;
-    text-shadow: 1px 1px white;
     font-size: 1em;
+    font-weight: 900;
     z-index: 3;
+}
+
+header {
+    text-align: center;
 }
 
 /*  */
@@ -25,21 +29,17 @@ header .profile-photo,
 header .ambient__container {
     display: block;
     max-width: 10rem;
+    box-shadow: 0 0 100px rgb(255, 255, 255, .3);
     border-radius: 50%;
-    /* border: 1px solid rgb(0, 81, 255);
-    box-shadow: 0 0 13px 1px var(--neon-blue); */
 }
 
 .about-wrapper {
     margin: 3rem 0;
 }
 
-@media screen and (min-width: 1024px) {
-    #information {
-        position: absolute;
-        right: 0;
-    }
-}
+/* @media screen and (min-width: 1024px) {
+
+} */
 
 @media screen and (max-width: 1024px) {
     .link-Container {

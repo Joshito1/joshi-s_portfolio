@@ -12,8 +12,7 @@ main {
     position: relative;
     padding: 1rem;
     width: min(50ch, 100% - 2rem);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: rgb(50, 50, 50);
+    box-shadow: 0 0 10px rgba(30, 30, 30, 0.7);
 }
 
 #portal {
@@ -21,7 +20,7 @@ main {
 }
 
 hr {
-    width: 100%;
+    width: 90%;
 }
 
 .links-container {
@@ -37,6 +36,9 @@ a {
     text-decoration: none;
     text-align: center;
     font-size: 30px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.7);
+    border: 1px solid #171615;
+    border-radius: 10px;
     color: white;
 }
 

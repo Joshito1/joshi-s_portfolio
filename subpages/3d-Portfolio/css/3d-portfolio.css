@@ -3,7 +3,6 @@ section {
     flex-direction: column;
     width: min(160ch, 100% - 0rem);
     margin-inline: auto;
-    background-color: rgb(15, 15, 15);
 }
 
 section .title h2 {
@@ -167,7 +166,8 @@ section .sorting p {
 .modal #modalImg {
     max-width: 99dvw;
     max-height: 99dvh;
-    border-radius: 3px;
+    box-shadow: 0 0 100px rgb(255, 255, 255, .3);
+    border-radius: 5px;
 }
 
 .modal-info {
@@ -214,6 +214,10 @@ section .sorting p {
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+p.disclaimer {
+    padding: 1rem 1rem 5rem;
 }
 
 p.disclaimer .excli {
